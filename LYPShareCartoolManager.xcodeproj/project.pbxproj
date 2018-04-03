@@ -1,0 +1,1416 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BAFC96AB8850315730BD93C1 /* libPods-LYPShareCartoolManagerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F1F55CB81A7C1774B17D86CC /* libPods-LYPShareCartoolManagerTests.a */; };
+		BBAD4F67A0DD0699B338B6FE /* libPods-LYPShareCartoolManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60C77AD249AB5F16EFCD98C2 /* libPods-LYPShareCartoolManager.a */; };
+		CF269FDC2D47799F3B707771 /* libPods-LYPShareCartoolManagerUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 70670D08C884280B581CF899 /* libPods-LYPShareCartoolManagerUITests.a */; };
+		D7284821206B907B00E15DE5 /* libxgidfa.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D728481D206B907B00E15DE5 /* libxgidfa.a */; };
+		D7284822206B907B00E15DE5 /* libXG-SDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D728481E206B907B00E15DE5 /* libXG-SDK.a */; };
+		D7284823206B907B00E15DE5 /* ReleaseNotes.txt in Resources */ = {isa = PBXBuildFile; fileRef = D728481F206B907B00E15DE5 /* ReleaseNotes.txt */; };
+		D7284825206B90B000E15DE5 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D7284824206B90B000E15DE5 /* libsqlite3.0.tbd */; };
+		D7284827206B90C300E15DE5 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7284826206B90C300E15DE5 /* UserNotifications.framework */; };
+		D7284829206B90D100E15DE5 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7284828206B90D100E15DE5 /* CoreTelephony.framework */; };
+		D728482B206B90DA00E15DE5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D728482A206B90D900E15DE5 /* SystemConfiguration.framework */; };
+		D728482D206B90EF00E15DE5 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D728482C206B90EF00E15DE5 /* libz.tbd */; };
+		D728483B206B970C00E15DE5 /* LYPDeviceListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D7284837206B970C00E15DE5 /* LYPDeviceListModel.m */; };
+		D728483C206B970C00E15DE5 /* LYPDataListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D728483A206B970C00E15DE5 /* LYPDataListModel.m */; };
+		D7371F9A206D2694007D151C /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D7371F97206D2693007D151C /* UIView+Extension.m */; };
+		D7371F9B206D2694007D151C /* YPPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7371F99206D2693007D151C /* YPPopView.m */; };
+		D7371F9E206D27C3007D151C /* LYPLocationView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7371F9D206D27C3007D151C /* LYPLocationView.m */; };
+		D7371FA0206D280B007D151C /* LYPLocationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7371F9F206D280B007D151C /* LYPLocationView.xib */; };
+		D74D74D1206DDA3C0019F2DA /* LYPModifyLocationView.m in Sources */ = {isa = PBXBuildFile; fileRef = D74D74D0206DDA3C0019F2DA /* LYPModifyLocationView.m */; };
+		D74D74D3206DDA570019F2DA /* LYPModifyLocationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D74D74D2206DDA570019F2DA /* LYPModifyLocationView.xib */; };
+		D74D74D6206E1DBF0019F2DA /* LYPSureOperationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D74D74D5206E1DBF0019F2DA /* LYPSureOperationVC.m */; };
+		D74D74DA206E3AE70019F2DA /* LYPPaperModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D74D74D9206E3AE70019F2DA /* LYPPaperModel.m */; };
+		D74D74DD206E3AF30019F2DA /* LYPPaperDataMOdel.m in Sources */ = {isa = PBXBuildFile; fileRef = D74D74DC206E3AF30019F2DA /* LYPPaperDataMOdel.m */; };
+		D76E468B2064F3DF006E965E /* LYPManagerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D76E468A2064F3DF006E965E /* LYPManagerVC.m */; };
+		D76E468E2064F4D3006E965E /* LYPmanagerExcelVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D76E468D2064F4D3006E965E /* LYPmanagerExcelVC.m */; };
+		D76E46912064F7FE006E965E /* LYPManagerToolVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D76E46902064F7FE006E965E /* LYPManagerToolVC.m */; };
+		D77469F4206CC00A00804C40 /* ContentViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D77469F1206CC00A00804C40 /* ContentViewCell.m */; };
+		D77469F5206CC00A00804C40 /* SheetView.m in Sources */ = {isa = PBXBuildFile; fileRef = D77469F3206CC00A00804C40 /* SheetView.m */; };
+		D7759984205FB34E009DCFD7 /* LYPCleanMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D7759983205FB34E009DCFD7 /* LYPCleanMainVC.m */; };
+		D775998B205FB519009DCFD7 /* JoeExcelView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7759989205FB518009DCFD7 /* JoeExcelView.m */; };
+		D7759990205FB526009DCFD7 /* TopCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = D775998E205FB525009DCFD7 /* TopCollectionView.m */; };
+		D7759991205FB526009DCFD7 /* TopCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D775998F205FB525009DCFD7 /* TopCollectionViewCell.m */; };
+		D775999A205FB554009DCFD7 /* JContentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D7759993205FB550009DCFD7 /* JContentTableViewCell.m */; };
+		D775999B205FB554009DCFD7 /* ContentTableFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = D7759995205FB551009DCFD7 /* ContentTableFooter.m */; };
+		D775999C205FB554009DCFD7 /* JContentTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7759996205FB552009DCFD7 /* JContentTableView.m */; };
+		D775999D205FB554009DCFD7 /* ContentCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D7759997205FB552009DCFD7 /* ContentCollectionViewCell.m */; };
+		D77C8D6420623BEC00D874A8 /* LYPCleanToolCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D77C8D6320623BEC00D874A8 /* LYPCleanToolCell.m */; };
+		D77C8D6720623C0900D874A8 /* LYPCleanToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = D77C8D6620623C0900D874A8 /* LYPCleanToolView.m */; };
+		D77C8D6A20623E2300D874A8 /* LYPToolModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D77C8D6920623E2300D874A8 /* LYPToolModel.m */; };
+		D77C8D792062622100D874A8 /* LYPCleanHomePageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D77C8D782062622100D874A8 /* LYPCleanHomePageVC.m */; };
+		D77C8D7C2062628D00D874A8 /* LYPCleanHomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D77C8D7B2062628D00D874A8 /* LYPCleanHomeCell.m */; };
+		D78775EA206A845700425BFF /* LYPCustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D78775D9206A845700425BFF /* LYPCustomButton.m */; };
+		D78775EB206A845700425BFF /* LYPPromptView.m in Sources */ = {isa = PBXBuildFile; fileRef = D78775DB206A845700425BFF /* LYPPromptView.m */; };
+		D78775EC206A845700425BFF /* StringEXtension.m in Sources */ = {isa = PBXBuildFile; fileRef = D78775DD206A845700425BFF /* StringEXtension.m */; };
+		D78775ED206A845700425BFF /* UIAlertController+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = D78775DF206A845700425BFF /* UIAlertController+Block.m */; };
+		D78775EE206A845700425BFF /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D78775E1206A845700425BFF /* UIBarButtonItem+Extension.m */; };
+		D78775EF206A845700425BFF /* UIImage+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = D78775E3206A845700425BFF /* UIImage+Extention.m */; };
+		D78775F0206A845700425BFF /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D78775E5206A845700425BFF /* UIView+Extension.m */; };
+		D78775F1206A845700425BFF /* UpAndLowerButtonPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = D78775E7206A845700425BFF /* UpAndLowerButtonPlace.m */; };
+		D78775F2206A845700425BFF /* YPLeftAndRightButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D78775E9206A845700425BFF /* YPLeftAndRightButton.m */; };
+		D78775FB206A848000425BFF /* LYPPersonCycTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D78775F5206A848000425BFF /* LYPPersonCycTableViewCell.m */; };
+		D78775FC206A848000425BFF /* LYPPersonCycTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D78775F6206A848000425BFF /* LYPPersonCycTableViewCell.xib */; };
+		D78775FD206A848000425BFF /* LYPPersonHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = D78775F8206A848000425BFF /* LYPPersonHeadView.m */; };
+		D78775FE206A848000425BFF /* LYPPersonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D78775FA206A848000425BFF /* LYPPersonTableViewCell.m */; };
+		D7877608206A848B00425BFF /* LYPErrorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D7877603206A848B00425BFF /* LYPErrorModel.m */; };
+		D7877609206A848B00425BFF /* LYPloginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D7877605206A848B00425BFF /* LYPloginModel.m */; };
+		D787760A206A848B00425BFF /* LYPTokenModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D7877607206A848B00425BFF /* LYPTokenModel.m */; };
+		D787760F206A849C00425BFF /* LYPMessageMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D787760B206A849C00425BFF /* LYPMessageMainVC.m */; };
+		D7877610206A849C00425BFF /* LYPPersonMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D787760E206A849C00425BFF /* LYPPersonMainVC.m */; };
+		D7877622206A84AA00425BFF /* XMGModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D7877614206A84A900425BFF /* XMGModel.m */; };
+		D7877623206A84AA00425BFF /* XMGSqliteModelTool.m in Sources */ = {isa = PBXBuildFile; fileRef = D7877617206A84A900425BFF /* XMGSqliteModelTool.m */; };
+		D7877624206A84AA00425BFF /* XMGSqliteTool.m in Sources */ = {isa = PBXBuildFile; fileRef = D7877619206A84A900425BFF /* XMGSqliteTool.m */; };
+		D7877625206A84AA00425BFF /* XMGTable.m in Sources */ = {isa = PBXBuildFile; fileRef = D787761B206A84A900425BFF /* XMGTable.m */; };
+		D7877626206A84AA00425BFF /* LYPSavePList.m in Sources */ = {isa = PBXBuildFile; fileRef = D787761D206A84A900425BFF /* LYPSavePList.m */; };
+		D7877627206A84AA00425BFF /* SVStatusHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = D787761F206A84A900425BFF /* SVStatusHUD.m */; };
+		D7877628206A84AA00425BFF /* UIViewController+DismissKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = D7877621206A84A900425BFF /* UIViewController+DismissKeyboard.m */; };
+		D7877630206A84BB00425BFF /* KKAnimateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D787762B206A84BB00425BFF /* KKAnimateViewController.m */; };
+		D7877631206A84BB00425BFF /* KKNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = D787762D206A84BB00425BFF /* KKNavController.m */; };
+		D7877632206A84BB00425BFF /* KKSliderMenuTool.m in Sources */ = {isa = PBXBuildFile; fileRef = D787762F206A84BB00425BFF /* KKSliderMenuTool.m */; };
+		D7877639206A84DF00425BFF /* LYPLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D7877635206A84DF00425BFF /* LYPLoginVC.m */; };
+		D787763A206A84DF00425BFF /* LYPLoginVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7877636206A84DF00425BFF /* LYPLoginVC.storyboard */; };
+		D787763B206A84DF00425BFF /* LYPRegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D7877638206A84DF00425BFF /* LYPRegisterVC.m */; };
+		D787763E206A84FE00425BFF /* LYPUserSingle.m in Sources */ = {isa = PBXBuildFile; fileRef = D787763D206A84FE00425BFF /* LYPUserSingle.m */; };
+		D78A8AFA205222F5000C8148 /* LYPNetWorkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = D78A8AF9205222F5000C8148 /* LYPNetWorkTool.m */; };
+		D79DE0E120512AD600367CEE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D79DE0E020512AD600367CEE /* AppDelegate.m */; };
+		D79DE0E420512AD600367CEE /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D79DE0E320512AD600367CEE /* BaseViewController.m */; };
+		D79DE0E720512AD600367CEE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D79DE0E520512AD600367CEE /* Main.storyboard */; };
+		D79DE0E920512AD600367CEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D79DE0E820512AD600367CEE /* Assets.xcassets */; };
+		D79DE0EC20512AD600367CEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D79DE0EA20512AD600367CEE /* LaunchScreen.storyboard */; };
+		D79DE0EF20512AD600367CEE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D79DE0EE20512AD600367CEE /* main.m */; };
+		D79DE0F920512AD600367CEE /* LYPShareCartoolManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D79DE0F820512AD600367CEE /* LYPShareCartoolManagerTests.m */; };
+		D79DE10420512AD600367CEE /* LYPShareCartoolManagerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D79DE10320512AD600367CEE /* LYPShareCartoolManagerUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D79DE0F520512AD600367CEE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D79DE0D420512AD600367CEE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D79DE0DB20512AD600367CEE;
+			remoteInfo = LYPShareCartoolManager;
+		};
+		D79DE10020512AD600367CEE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D79DE0D420512AD600367CEE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D79DE0DB20512AD600367CEE;
+			remoteInfo = LYPShareCartoolManager;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		05310530EAD597EC4BDD4A9E /* Pods-LYPShareCartoolManagerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYPShareCartoolManagerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LYPShareCartoolManagerTests/Pods-LYPShareCartoolManagerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		18A69A11E134569B1B601457 /* Pods-LYPShareCartoolManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYPShareCartoolManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LYPShareCartoolManager/Pods-LYPShareCartoolManager.debug.xcconfig"; sourceTree = "<group>"; };
+		60C77AD249AB5F16EFCD98C2 /* libPods-LYPShareCartoolManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LYPShareCartoolManager.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		70670D08C884280B581CF899 /* libPods-LYPShareCartoolManagerUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LYPShareCartoolManagerUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DBF446A0629C433D40F40D3 /* Pods-LYPShareCartoolManagerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYPShareCartoolManagerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LYPShareCartoolManagerTests/Pods-LYPShareCartoolManagerTests.release.xcconfig"; sourceTree = "<group>"; };
+		99D3994DBC2F17BEC5B864F2 /* Pods-LYPShareCartoolManagerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYPShareCartoolManagerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LYPShareCartoolManagerUITests/Pods-LYPShareCartoolManagerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C18B1337CE033F6FBCCF7DFB /* Pods-LYPShareCartoolManagerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYPShareCartoolManagerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LYPShareCartoolManagerUITests/Pods-LYPShareCartoolManagerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C79874D679B716274A6D25F4 /* Pods-LYPShareCartoolManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYPShareCartoolManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-LYPShareCartoolManager/Pods-LYPShareCartoolManager.release.xcconfig"; sourceTree = "<group>"; };
+		D728481D206B907B00E15DE5 /* libxgidfa.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libxgidfa.a; sourceTree = "<group>"; };
+		D728481E206B907B00E15DE5 /* libXG-SDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libXG-SDK.a"; sourceTree = "<group>"; };
+		D728481F206B907B00E15DE5 /* ReleaseNotes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReleaseNotes.txt; sourceTree = "<group>"; };
+		D7284820206B907B00E15DE5 /* XGPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGPush.h; sourceTree = "<group>"; };
+		D7284824206B90B000E15DE5 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		D7284826206B90C300E15DE5 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		D7284828206B90D100E15DE5 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		D728482A206B90D900E15DE5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		D728482C206B90EF00E15DE5 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		D7284837206B970C00E15DE5 /* LYPDeviceListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYPDeviceListModel.m; sourceTree = "<group>"; };
+		D7284838206B970C00E15DE5 /* LYPDeviceListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYPDeviceListModel.h; sourceTree = "<group>"; };
+		D7284839206B970C00E15DE5 /* LYPDataListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYPDataListModel.h; sourceTree = "<group>"; };
+		D728483A206B970C00E15DE5 /* LYPDataListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYPDataListModel.m; sourceTree = "<group>"; };
+		D7371F96206D2693007D151C /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		D7371F97206D2693007D151C /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		D7371F98206D2693007D151C /* YPPopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YPPopView.h; sourceTree = "<group>"; };
+		D7371F99206D2693007D151C /* YPPopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YPPopView.m; sourceTree = "<group>"; };
+		D7371F9C206D27C3007D151C /* LYPLocationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPLocationView.h; sourceTree = "<group>"; };
+		D7371F9D206D27C3007D151C /* LYPLocationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPLocationView.m; sourceTree = "<group>"; };
+		D7371F9F206D280B007D151C /* LYPLocationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LYPLocationView.xib; sourceTree = "<group>"; };
+		D74D74CF206DDA3C0019F2DA /* LYPModifyLocationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPModifyLocationView.h; sourceTree = "<group>"; };
+		D74D74D0206DDA3C0019F2DA /* LYPModifyLocationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPModifyLocationView.m; sourceTree = "<group>"; };
+		D74D74D2206DDA570019F2DA /* LYPModifyLocationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LYPModifyLocationView.xib; sourceTree = "<group>"; };
+		D74D74D4206E1DBF0019F2DA /* LYPSureOperationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPSureOperationVC.h; sourceTree = "<group>"; };
+		D74D74D5206E1DBF0019F2DA /* LYPSureOperationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPSureOperationVC.m; sourceTree = "<group>"; };
+		D74D74D8206E3AE70019F2DA /* LYPPaperModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPPaperModel.h; sourceTree = "<group>"; };
+		D74D74D9206E3AE70019F2DA /* LYPPaperModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPPaperModel.m; sourceTree = "<group>"; };
+		D74D74DB206E3AF30019F2DA /* LYPPaperDataMOdel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPPaperDataMOdel.h; sourceTree = "<group>"; };
+		D74D74DC206E3AF30019F2DA /* LYPPaperDataMOdel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPPaperDataMOdel.m; sourceTree = "<group>"; };
+		D76E46892064F3DF006E965E /* LYPManagerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPManagerVC.h; sourceTree = "<group>"; };
+		D76E468A2064F3DF006E965E /* LYPManagerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPManagerVC.m; sourceTree = "<group>"; };
+		D76E468C2064F4D3006E965E /* LYPmanagerExcelVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPmanagerExcelVC.h; sourceTree = "<group>"; };
+		D76E468D2064F4D3006E965E /* LYPmanagerExcelVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPmanagerExcelVC.m; sourceTree = "<group>"; };
+		D76E468F2064F7FE006E965E /* LYPManagerToolVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPManagerToolVC.h; sourceTree = "<group>"; };
+		D76E46902064F7FE006E965E /* LYPManagerToolVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPManagerToolVC.m; sourceTree = "<group>"; };
+		D77469F0206CC00A00804C40 /* ContentViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentViewCell.h; sourceTree = "<group>"; };
+		D77469F1206CC00A00804C40 /* ContentViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentViewCell.m; sourceTree = "<group>"; };
+		D77469F2206CC00A00804C40 /* SheetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SheetView.h; sourceTree = "<group>"; };
+		D77469F3206CC00A00804C40 /* SheetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SheetView.m; sourceTree = "<group>"; };
+		D7759982205FB34E009DCFD7 /* LYPCleanMainVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPCleanMainVC.h; sourceTree = "<group>"; };
+		D7759983205FB34E009DCFD7 /* LYPCleanMainVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPCleanMainVC.m; sourceTree = "<group>"; };
+		D7759988205FB517009DCFD7 /* JoeExcel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JoeExcel.h; sourceTree = "<group>"; };
+		D7759989205FB518009DCFD7 /* JoeExcelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JoeExcelView.m; sourceTree = "<group>"; };
+		D775998A205FB519009DCFD7 /* JoeExcelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JoeExcelView.h; sourceTree = "<group>"; };
+		D775998C205FB523009DCFD7 /* TopCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopCollectionViewCell.h; sourceTree = "<group>"; };
+		D775998D205FB524009DCFD7 /* TopCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopCollectionView.h; sourceTree = "<group>"; };
+		D775998E205FB525009DCFD7 /* TopCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopCollectionView.m; sourceTree = "<group>"; };
+		D775998F205FB525009DCFD7 /* TopCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopCollectionViewCell.m; sourceTree = "<group>"; };
+		D7759992205FB54F009DCFD7 /* JContentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JContentTableViewCell.h; sourceTree = "<group>"; };
+		D7759993205FB550009DCFD7 /* JContentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JContentTableViewCell.m; sourceTree = "<group>"; };
+		D7759994205FB550009DCFD7 /* ContentTableFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentTableFooter.h; sourceTree = "<group>"; };
+		D7759995205FB551009DCFD7 /* ContentTableFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentTableFooter.m; sourceTree = "<group>"; };
+		D7759996205FB552009DCFD7 /* JContentTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JContentTableView.m; sourceTree = "<group>"; };
+		D7759997205FB552009DCFD7 /* ContentCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentCollectionViewCell.m; sourceTree = "<group>"; };
+		D7759998205FB553009DCFD7 /* ContentCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentCollectionViewCell.h; sourceTree = "<group>"; };
+		D7759999205FB554009DCFD7 /* JContentTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JContentTableView.h; sourceTree = "<group>"; };
+		D77C8D6220623BEC00D874A8 /* LYPCleanToolCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPCleanToolCell.h; sourceTree = "<group>"; };
+		D77C8D6320623BEC00D874A8 /* LYPCleanToolCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPCleanToolCell.m; sourceTree = "<group>"; };
+		D77C8D6520623C0900D874A8 /* LYPCleanToolView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPCleanToolView.h; sourceTree = "<group>"; };
+		D77C8D6620623C0900D874A8 /* LYPCleanToolView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPCleanToolView.m; sourceTree = "<group>"; };
+		D77C8D6820623E2300D874A8 /* LYPToolModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPToolModel.h; sourceTree = "<group>"; };
+		D77C8D6920623E2300D874A8 /* LYPToolModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPToolModel.m; sourceTree = "<group>"; };
+		D77C8D772062622100D874A8 /* LYPCleanHomePageVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPCleanHomePageVC.h; sourceTree = "<group>"; };
+		D77C8D782062622100D874A8 /* LYPCleanHomePageVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPCleanHomePageVC.m; sourceTree = "<group>"; };
+		D77C8D7A2062628D00D874A8 /* LYPCleanHomeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPCleanHomeCell.h; sourceTree = "<group>"; };
+		D77C8D7B2062628D00D874A8 /* LYPCleanHomeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPCleanHomeCell.m; sourceTree = "<group>"; };
+		D78775D8206A845700425BFF /* LYPCustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYPCustomButton.h; sourceTree = "<group>"; };
+		D78775D9206A845700425BFF /* LYPCustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYPCustomButton.m; sourceTree = "<group>"; };
+		D78775DA206A845700425BFF /* LYPPromptView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYPPromptView.h; sourceTree = "<group>"; };
+		D78775DB206A845700425BFF /* LYPPromptView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYPPromptView.m; sourceTree = "<group>"; };
+		D78775DC206A845700425BFF /* StringEXtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringEXtension.h; sourceTree = "<group>"; };
+		D78775DD206A845700425BFF /* StringEXtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringEXtension.m; sourceTree = "<group>"; };
+		D78775DE206A845700425BFF /* UIAlertController+Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Block.h"; sourceTree = "<group>"; };
+		D78775DF206A845700425BFF /* UIAlertController+Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Block.m"; sourceTree = "<group>"; };
+		D78775E0206A845700425BFF /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
+		D78775E1206A845700425BFF /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
+		D78775E2206A845700425BFF /* UIImage+Extention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extention.h"; sourceTree = "<group>"; };
+		D78775E3206A845700425BFF /* UIImage+Extention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extention.m"; sourceTree = "<group>"; };
+		D78775E4206A845700425BFF /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		D78775E5206A845700425BFF /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		D78775E6206A845700425BFF /* UpAndLowerButtonPlace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpAndLowerButtonPlace.h; sourceTree = "<group>"; };
+		D78775E7206A845700425BFF /* UpAndLowerButtonPlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpAndLowerButtonPlace.m; sourceTree = "<group>"; };
+		D78775E8206A845700425BFF /* YPLeftAndRightButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YPLeftAndRightButton.h; sourceTree = "<group>"; };
+		D78775E9206A845700425BFF /* YPLeftAndRightButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YPLeftAndRightButton.m; sourceTree = "<group>"; };
+		D78775F4206A848000425BFF /* LYPPersonCycTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYPPersonCycTableViewCell.h; sourceTree = "<group>"; };
+		D78775F5206A848000425BFF /* LYPPersonCycTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYPPersonCycTableViewCell.m; sourceTree = "<group>"; };
+		D78775F6206A848000425BFF /* LYPPersonCycTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYPPersonCycTableViewCell.xib; sourceTree = "<group>"; };
+		D78775F7206A848000425BFF /* LYPPersonHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYPPersonHeadView.h; sourceTree = "<group>"; };
+		D78775F8206A848000425BFF /* LYPPersonHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYPPersonHeadView.m; sourceTree = "<group>"; };
+		D78775F9206A848000425BFF /* LYPPersonTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYPPersonTableViewCell.h; sourceTree = "<group>"; };
+		D78775FA206A848000425BFF /* LYPPersonTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYPPersonTableViewCell.m; sourceTree = "<group>"; };
+		D7877602206A848B00425BFF /* LYPErrorModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYPErrorModel.h; sourceTree = "<group>"; };
+		D7877603206A848B00425BFF /* LYPErrorModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYPErrorModel.m; sourceTree = "<group>"; };
+		D7877604206A848B00425BFF /* LYPloginModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYPloginModel.h; sourceTree = "<group>"; };
+		D7877605206A848B00425BFF /* LYPloginModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYPloginModel.m; sourceTree = "<group>"; };
+		D7877606206A848B00425BFF /* LYPTokenModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYPTokenModel.h; sourceTree = "<group>"; };
+		D7877607206A848B00425BFF /* LYPTokenModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYPTokenModel.m; sourceTree = "<group>"; };
+		D787760B206A849C00425BFF /* LYPMessageMainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYPMessageMainVC.m; sourceTree = "<group>"; };
+		D787760C206A849C00425BFF /* LYPMessageMainVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYPMessageMainVC.h; sourceTree = "<group>"; };
+		D787760D206A849C00425BFF /* LYPPersonMainVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYPPersonMainVC.h; sourceTree = "<group>"; };
+		D787760E206A849C00425BFF /* LYPPersonMainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYPPersonMainVC.m; sourceTree = "<group>"; };
+		D7877613206A84A900425BFF /* XMGModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGModel.h; sourceTree = "<group>"; };
+		D7877614206A84A900425BFF /* XMGModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGModel.m; sourceTree = "<group>"; };
+		D7877615206A84A900425BFF /* XMGSqliteModelProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGSqliteModelProtocol.h; sourceTree = "<group>"; };
+		D7877616206A84A900425BFF /* XMGSqliteModelTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGSqliteModelTool.h; sourceTree = "<group>"; };
+		D7877617206A84A900425BFF /* XMGSqliteModelTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGSqliteModelTool.m; sourceTree = "<group>"; };
+		D7877618206A84A900425BFF /* XMGSqliteTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGSqliteTool.h; sourceTree = "<group>"; };
+		D7877619206A84A900425BFF /* XMGSqliteTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGSqliteTool.m; sourceTree = "<group>"; };
+		D787761A206A84A900425BFF /* XMGTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGTable.h; sourceTree = "<group>"; };
+		D787761B206A84A900425BFF /* XMGTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTable.m; sourceTree = "<group>"; };
+		D787761C206A84A900425BFF /* LYPSavePList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYPSavePList.h; sourceTree = "<group>"; };
+		D787761D206A84A900425BFF /* LYPSavePList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYPSavePList.m; sourceTree = "<group>"; };
+		D787761E206A84A900425BFF /* SVStatusHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVStatusHUD.h; sourceTree = "<group>"; };
+		D787761F206A84A900425BFF /* SVStatusHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVStatusHUD.m; sourceTree = "<group>"; };
+		D7877620206A84A900425BFF /* UIViewController+DismissKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DismissKeyboard.h"; sourceTree = "<group>"; };
+		D7877621206A84A900425BFF /* UIViewController+DismissKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DismissKeyboard.m"; sourceTree = "<group>"; };
+		D787762A206A84BB00425BFF /* KKAnimateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKAnimateViewController.h; sourceTree = "<group>"; };
+		D787762B206A84BB00425BFF /* KKAnimateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKAnimateViewController.m; sourceTree = "<group>"; };
+		D787762C206A84BB00425BFF /* KKNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKNavController.h; sourceTree = "<group>"; };
+		D787762D206A84BB00425BFF /* KKNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKNavController.m; sourceTree = "<group>"; };
+		D787762E206A84BB00425BFF /* KKSliderMenuTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKSliderMenuTool.h; sourceTree = "<group>"; };
+		D787762F206A84BB00425BFF /* KKSliderMenuTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKSliderMenuTool.m; sourceTree = "<group>"; };
+		D7877634206A84DF00425BFF /* LYPLoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYPLoginVC.h; sourceTree = "<group>"; };
+		D7877635206A84DF00425BFF /* LYPLoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYPLoginVC.m; sourceTree = "<group>"; };
+		D7877636206A84DF00425BFF /* LYPLoginVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LYPLoginVC.storyboard; sourceTree = "<group>"; };
+		D7877637206A84DF00425BFF /* LYPRegisterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYPRegisterVC.h; sourceTree = "<group>"; };
+		D7877638206A84DF00425BFF /* LYPRegisterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYPRegisterVC.m; sourceTree = "<group>"; };
+		D787763C206A84FE00425BFF /* LYPUserSingle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYPUserSingle.h; sourceTree = "<group>"; };
+		D787763D206A84FE00425BFF /* LYPUserSingle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYPUserSingle.m; sourceTree = "<group>"; };
+		D78A8AF8205222F5000C8148 /* LYPNetWorkTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPNetWorkTool.h; sourceTree = "<group>"; };
+		D78A8AF9205222F5000C8148 /* LYPNetWorkTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPNetWorkTool.m; sourceTree = "<group>"; };
+		D79D58462068D9E50001A7FC /* LYPManageCleanToolProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPManageCleanToolProtocol.h; sourceTree = "<group>"; };
+		D79DE0DC20512AD600367CEE /* LYPShareCartoolManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LYPShareCartoolManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D79DE0DF20512AD600367CEE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D79DE0E020512AD600367CEE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D79DE0E220512AD600367CEE /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		D79DE0E320512AD600367CEE /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		D79DE0E620512AD600367CEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D79DE0E820512AD600367CEE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D79DE0EB20512AD600367CEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D79DE0ED20512AD600367CEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D79DE0EE20512AD600367CEE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D79DE0F420512AD600367CEE /* LYPShareCartoolManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LYPShareCartoolManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D79DE0F820512AD600367CEE /* LYPShareCartoolManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPShareCartoolManagerTests.m; sourceTree = "<group>"; };
+		D79DE0FA20512AD600367CEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D79DE0FF20512AD600367CEE /* LYPShareCartoolManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LYPShareCartoolManagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D79DE10320512AD600367CEE /* LYPShareCartoolManagerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPShareCartoolManagerUITests.m; sourceTree = "<group>"; };
+		D79DE10520512AD600367CEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D79DE1162051314400367CEE /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		F1F55CB81A7C1774B17D86CC /* libPods-LYPShareCartoolManagerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LYPShareCartoolManagerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D79DE0D920512AD600367CEE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D728482D206B90EF00E15DE5 /* libz.tbd in Frameworks */,
+				D728482B206B90DA00E15DE5 /* SystemConfiguration.framework in Frameworks */,
+				D7284829206B90D100E15DE5 /* CoreTelephony.framework in Frameworks */,
+				D7284827206B90C300E15DE5 /* UserNotifications.framework in Frameworks */,
+				D7284825206B90B000E15DE5 /* libsqlite3.0.tbd in Frameworks */,
+				D7284821206B907B00E15DE5 /* libxgidfa.a in Frameworks */,
+				BBAD4F67A0DD0699B338B6FE /* libPods-LYPShareCartoolManager.a in Frameworks */,
+				D7284822206B907B00E15DE5 /* libXG-SDK.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D79DE0F120512AD600367CEE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAFC96AB8850315730BD93C1 /* libPods-LYPShareCartoolManagerTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D79DE0FC20512AD600367CEE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF269FDC2D47799F3B707771 /* libPods-LYPShareCartoolManagerUITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B6F6D7A56B3BC7427D868035 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D728482C206B90EF00E15DE5 /* libz.tbd */,
+				D728482A206B90D900E15DE5 /* SystemConfiguration.framework */,
+				D7284828206B90D100E15DE5 /* CoreTelephony.framework */,
+				D7284826206B90C300E15DE5 /* UserNotifications.framework */,
+				D7284824206B90B000E15DE5 /* libsqlite3.0.tbd */,
+				60C77AD249AB5F16EFCD98C2 /* libPods-LYPShareCartoolManager.a */,
+				F1F55CB81A7C1774B17D86CC /* libPods-LYPShareCartoolManagerTests.a */,
+				70670D08C884280B581CF899 /* libPods-LYPShareCartoolManagerUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D728481B206B907B00E15DE5 /* sdk */ = {
+			isa = PBXGroup;
+			children = (
+				D728481C206B907B00E15DE5 /* idfa */,
+				D728481E206B907B00E15DE5 /* libXG-SDK.a */,
+				D728481F206B907B00E15DE5 /* ReleaseNotes.txt */,
+				D7284820206B907B00E15DE5 /* XGPush.h */,
+			);
+			path = sdk;
+			sourceTree = "<group>";
+		};
+		D728481C206B907B00E15DE5 /* idfa */ = {
+			isa = PBXGroup;
+			children = (
+				D728481D206B907B00E15DE5 /* libxgidfa.a */,
+			);
+			path = idfa;
+			sourceTree = "<group>";
+		};
+		D7371F95206D2693007D151C /* PopView */ = {
+			isa = PBXGroup;
+			children = (
+				D7371F96206D2693007D151C /* UIView+Extension.h */,
+				D7371F97206D2693007D151C /* UIView+Extension.m */,
+				D7371F98206D2693007D151C /* YPPopView.h */,
+				D7371F99206D2693007D151C /* YPPopView.m */,
+			);
+			path = PopView;
+			sourceTree = "<group>";
+		};
+		D74D74D7206E3ACC0019F2DA /* PaperModel */ = {
+			isa = PBXGroup;
+			children = (
+				D74D74D8206E3AE70019F2DA /* LYPPaperModel.h */,
+				D74D74D9206E3AE70019F2DA /* LYPPaperModel.m */,
+				D74D74DB206E3AF30019F2DA /* LYPPaperDataMOdel.h */,
+				D74D74DC206E3AF30019F2DA /* LYPPaperDataMOdel.m */,
+			);
+			path = PaperModel;
+			sourceTree = "<group>";
+		};
+		D76E46852064F2BB006E965E /* 管理员 */ = {
+			isa = PBXGroup;
+			children = (
+				D76E46882064F2DF006E965E /* View */,
+				D76E46872064F2DA006E965E /* Model */,
+				D76E46862064F2CA006E965E /* Controller */,
+			);
+			path = "管理员";
+			sourceTree = "<group>";
+		};
+		D76E46862064F2CA006E965E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D76E46892064F3DF006E965E /* LYPManagerVC.h */,
+				D76E468A2064F3DF006E965E /* LYPManagerVC.m */,
+				D76E468C2064F4D3006E965E /* LYPmanagerExcelVC.h */,
+				D76E468D2064F4D3006E965E /* LYPmanagerExcelVC.m */,
+				D76E468F2064F7FE006E965E /* LYPManagerToolVC.h */,
+				D76E46902064F7FE006E965E /* LYPManagerToolVC.m */,
+				D79D58462068D9E50001A7FC /* LYPManageCleanToolProtocol.h */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D76E46872064F2DA006E965E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D76E46882064F2DF006E965E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D7371F9C206D27C3007D151C /* LYPLocationView.h */,
+				D7371F9D206D27C3007D151C /* LYPLocationView.m */,
+				D7371F9F206D280B007D151C /* LYPLocationView.xib */,
+				D74D74CF206DDA3C0019F2DA /* LYPModifyLocationView.h */,
+				D74D74D0206DDA3C0019F2DA /* LYPModifyLocationView.m */,
+				D74D74D2206DDA570019F2DA /* LYPModifyLocationView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D77469EF206CC00A00804C40 /* SheetView */ = {
+			isa = PBXGroup;
+			children = (
+				D77469F0206CC00A00804C40 /* ContentViewCell.h */,
+				D77469F1206CC00A00804C40 /* ContentViewCell.m */,
+				D77469F2206CC00A00804C40 /* SheetView.h */,
+				D77469F3206CC00A00804C40 /* SheetView.m */,
+			);
+			path = SheetView;
+			sourceTree = "<group>";
+		};
+		D775997B205FB180009DCFD7 /* 清洁工 */ = {
+			isa = PBXGroup;
+			children = (
+				D7B2CA94206B68DA00CC933D /* View */,
+				D775997D205FB197009DCFD7 /* Model */,
+				D775997C205FB18E009DCFD7 /* Controller */,
+			);
+			path = "清洁工";
+			sourceTree = "<group>";
+		};
+		D775997C205FB18E009DCFD7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D7759985205FB4B3009DCFD7 /* CleanExcel */,
+				D7759982205FB34E009DCFD7 /* LYPCleanMainVC.h */,
+				D7759983205FB34E009DCFD7 /* LYPCleanMainVC.m */,
+				D74D74D4206E1DBF0019F2DA /* LYPSureOperationVC.h */,
+				D74D74D5206E1DBF0019F2DA /* LYPSureOperationVC.m */,
+				D7759988205FB517009DCFD7 /* JoeExcel.h */,
+				D775998A205FB519009DCFD7 /* JoeExcelView.h */,
+				D7759989205FB518009DCFD7 /* JoeExcelView.m */,
+				D77C8D6220623BEC00D874A8 /* LYPCleanToolCell.h */,
+				D77C8D6320623BEC00D874A8 /* LYPCleanToolCell.m */,
+				D77C8D6520623C0900D874A8 /* LYPCleanToolView.h */,
+				D77C8D6620623C0900D874A8 /* LYPCleanToolView.m */,
+				D77C8D772062622100D874A8 /* LYPCleanHomePageVC.h */,
+				D77C8D782062622100D874A8 /* LYPCleanHomePageVC.m */,
+				D77C8D7A2062628D00D874A8 /* LYPCleanHomeCell.h */,
+				D77C8D7B2062628D00D874A8 /* LYPCleanHomeCell.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D775997D205FB197009DCFD7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D77C8D6820623E2300D874A8 /* LYPToolModel.h */,
+				D77C8D6920623E2300D874A8 /* LYPToolModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D7759985205FB4B3009DCFD7 /* CleanExcel */ = {
+			isa = PBXGroup;
+			children = (
+				D7759987205FB4E8009DCFD7 /* 底部TableView */,
+				D7759986205FB4D8009DCFD7 /* 顶部 */,
+			);
+			path = CleanExcel;
+			sourceTree = "<group>";
+		};
+		D7759986205FB4D8009DCFD7 /* 顶部 */ = {
+			isa = PBXGroup;
+			children = (
+				D775998D205FB524009DCFD7 /* TopCollectionView.h */,
+				D775998E205FB525009DCFD7 /* TopCollectionView.m */,
+				D775998C205FB523009DCFD7 /* TopCollectionViewCell.h */,
+				D775998F205FB525009DCFD7 /* TopCollectionViewCell.m */,
+			);
+			path = "顶部";
+			sourceTree = "<group>";
+		};
+		D7759987205FB4E8009DCFD7 /* 底部TableView */ = {
+			isa = PBXGroup;
+			children = (
+				D7759998205FB553009DCFD7 /* ContentCollectionViewCell.h */,
+				D7759997205FB552009DCFD7 /* ContentCollectionViewCell.m */,
+				D7759994205FB550009DCFD7 /* ContentTableFooter.h */,
+				D7759995205FB551009DCFD7 /* ContentTableFooter.m */,
+				D7759999205FB554009DCFD7 /* JContentTableView.h */,
+				D7759996205FB552009DCFD7 /* JContentTableView.m */,
+				D7759992205FB54F009DCFD7 /* JContentTableViewCell.h */,
+				D7759993205FB550009DCFD7 /* JContentTableViewCell.m */,
+			);
+			path = "底部TableView";
+			sourceTree = "<group>";
+		};
+		D775999F205FB771009DCFD7 /* PublicVC */ = {
+			isa = PBXGroup;
+			children = (
+				D77469EF206CC00A00804C40 /* SheetView */,
+				D787763C206A84FE00425BFF /* LYPUserSingle.h */,
+				D787763D206A84FE00425BFF /* LYPUserSingle.m */,
+				D787760C206A849C00425BFF /* LYPMessageMainVC.h */,
+				D787760B206A849C00425BFF /* LYPMessageMainVC.m */,
+				D787760D206A849C00425BFF /* LYPPersonMainVC.h */,
+				D787760E206A849C00425BFF /* LYPPersonMainVC.m */,
+				D78775FF206A848B00425BFF /* Model */,
+				D78775F3206A848000425BFF /* View */,
+			);
+			path = PublicVC;
+			sourceTree = "<group>";
+		};
+		D78775D7206A845700425BFF /* UITool */ = {
+			isa = PBXGroup;
+			children = (
+				D78775D8206A845700425BFF /* LYPCustomButton.h */,
+				D78775D9206A845700425BFF /* LYPCustomButton.m */,
+				D78775DA206A845700425BFF /* LYPPromptView.h */,
+				D78775DB206A845700425BFF /* LYPPromptView.m */,
+				D78775DC206A845700425BFF /* StringEXtension.h */,
+				D78775DD206A845700425BFF /* StringEXtension.m */,
+				D78775DE206A845700425BFF /* UIAlertController+Block.h */,
+				D78775DF206A845700425BFF /* UIAlertController+Block.m */,
+				D78775E0206A845700425BFF /* UIBarButtonItem+Extension.h */,
+				D78775E1206A845700425BFF /* UIBarButtonItem+Extension.m */,
+				D78775E2206A845700425BFF /* UIImage+Extention.h */,
+				D78775E3206A845700425BFF /* UIImage+Extention.m */,
+				D78775E4206A845700425BFF /* UIView+Extension.h */,
+				D78775E5206A845700425BFF /* UIView+Extension.m */,
+				D78775E6206A845700425BFF /* UpAndLowerButtonPlace.h */,
+				D78775E7206A845700425BFF /* UpAndLowerButtonPlace.m */,
+				D78775E8206A845700425BFF /* YPLeftAndRightButton.h */,
+				D78775E9206A845700425BFF /* YPLeftAndRightButton.m */,
+			);
+			path = UITool;
+			sourceTree = "<group>";
+		};
+		D78775F3206A848000425BFF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D78775F4206A848000425BFF /* LYPPersonCycTableViewCell.h */,
+				D78775F5206A848000425BFF /* LYPPersonCycTableViewCell.m */,
+				D78775F6206A848000425BFF /* LYPPersonCycTableViewCell.xib */,
+				D78775F7206A848000425BFF /* LYPPersonHeadView.h */,
+				D78775F8206A848000425BFF /* LYPPersonHeadView.m */,
+				D78775F9206A848000425BFF /* LYPPersonTableViewCell.h */,
+				D78775FA206A848000425BFF /* LYPPersonTableViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D78775FF206A848B00425BFF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D74D74D7206E3ACC0019F2DA /* PaperModel */,
+				D7877600206A848B00425BFF /* DevieceListModel */,
+				D7877601206A848B00425BFF /* LoginModel */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D7877600206A848B00425BFF /* DevieceListModel */ = {
+			isa = PBXGroup;
+			children = (
+				D7284839206B970C00E15DE5 /* LYPDataListModel.h */,
+				D728483A206B970C00E15DE5 /* LYPDataListModel.m */,
+				D7284838206B970C00E15DE5 /* LYPDeviceListModel.h */,
+				D7284837206B970C00E15DE5 /* LYPDeviceListModel.m */,
+			);
+			path = DevieceListModel;
+			sourceTree = "<group>";
+		};
+		D7877601206A848B00425BFF /* LoginModel */ = {
+			isa = PBXGroup;
+			children = (
+				D7877602206A848B00425BFF /* LYPErrorModel.h */,
+				D7877603206A848B00425BFF /* LYPErrorModel.m */,
+				D7877604206A848B00425BFF /* LYPloginModel.h */,
+				D7877605206A848B00425BFF /* LYPloginModel.m */,
+				D7877606206A848B00425BFF /* LYPTokenModel.h */,
+				D7877607206A848B00425BFF /* LYPTokenModel.m */,
+			);
+			path = LoginModel;
+			sourceTree = "<group>";
+		};
+		D7877611206A84A900425BFF /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				D7371F95206D2693007D151C /* PopView */,
+				D7877612206A84A900425BFF /* Classes */,
+				D787761C206A84A900425BFF /* LYPSavePList.h */,
+				D787761D206A84A900425BFF /* LYPSavePList.m */,
+				D787761E206A84A900425BFF /* SVStatusHUD.h */,
+				D787761F206A84A900425BFF /* SVStatusHUD.m */,
+				D7877620206A84A900425BFF /* UIViewController+DismissKeyboard.h */,
+				D7877621206A84A900425BFF /* UIViewController+DismissKeyboard.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		D7877612206A84A900425BFF /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D7877613206A84A900425BFF /* XMGModel.h */,
+				D7877614206A84A900425BFF /* XMGModel.m */,
+				D7877615206A84A900425BFF /* XMGSqliteModelProtocol.h */,
+				D7877616206A84A900425BFF /* XMGSqliteModelTool.h */,
+				D7877617206A84A900425BFF /* XMGSqliteModelTool.m */,
+				D7877618206A84A900425BFF /* XMGSqliteTool.h */,
+				D7877619206A84A900425BFF /* XMGSqliteTool.m */,
+				D787761A206A84A900425BFF /* XMGTable.h */,
+				D787761B206A84A900425BFF /* XMGTable.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		D7877629206A84BB00425BFF /* 侧边栏 */ = {
+			isa = PBXGroup;
+			children = (
+				D787762A206A84BB00425BFF /* KKAnimateViewController.h */,
+				D787762B206A84BB00425BFF /* KKAnimateViewController.m */,
+				D787762C206A84BB00425BFF /* KKNavController.h */,
+				D787762D206A84BB00425BFF /* KKNavController.m */,
+				D787762E206A84BB00425BFF /* KKSliderMenuTool.h */,
+				D787762F206A84BB00425BFF /* KKSliderMenuTool.m */,
+			);
+			path = "侧边栏";
+			sourceTree = "<group>";
+		};
+		D7877633206A84DF00425BFF /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				D7877634206A84DF00425BFF /* LYPLoginVC.h */,
+				D7877635206A84DF00425BFF /* LYPLoginVC.m */,
+				D7877636206A84DF00425BFF /* LYPLoginVC.storyboard */,
+				D7877637206A84DF00425BFF /* LYPRegisterVC.h */,
+				D7877638206A84DF00425BFF /* LYPRegisterVC.m */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		D78A8AF72052229C000C8148 /* NetworkTool */ = {
+			isa = PBXGroup;
+			children = (
+				D78A8AF8205222F5000C8148 /* LYPNetWorkTool.h */,
+				D78A8AF9205222F5000C8148 /* LYPNetWorkTool.m */,
+			);
+			path = NetworkTool;
+			sourceTree = "<group>";
+		};
+		D79DE0D320512AD600367CEE = {
+			isa = PBXGroup;
+			children = (
+				D79DE0DE20512AD600367CEE /* LYPShareCartoolManager */,
+				D79DE0F720512AD600367CEE /* LYPShareCartoolManagerTests */,
+				D79DE10220512AD600367CEE /* LYPShareCartoolManagerUITests */,
+				D79DE0DD20512AD600367CEE /* Products */,
+				E78426B5FA959D4813CB3D4A /* Pods */,
+				B6F6D7A56B3BC7427D868035 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D79DE0DD20512AD600367CEE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D79DE0DC20512AD600367CEE /* LYPShareCartoolManager.app */,
+				D79DE0F420512AD600367CEE /* LYPShareCartoolManagerTests.xctest */,
+				D79DE0FF20512AD600367CEE /* LYPShareCartoolManagerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D79DE0DE20512AD600367CEE /* LYPShareCartoolManager */ = {
+			isa = PBXGroup;
+			children = (
+				D728481B206B907B00E15DE5 /* sdk */,
+				D7877633206A84DF00425BFF /* Login */,
+				D7877629206A84BB00425BFF /* 侧边栏 */,
+				D7877611206A84A900425BFF /* Tool */,
+				D78775D7206A845700425BFF /* UITool */,
+				D775999F205FB771009DCFD7 /* PublicVC */,
+				D79DE11120512FF800367CEE /* Main */,
+				D79DE0DF20512AD600367CEE /* AppDelegate.h */,
+				D79DE0E020512AD600367CEE /* AppDelegate.m */,
+				D79DE0E220512AD600367CEE /* BaseViewController.h */,
+				D79DE0E320512AD600367CEE /* BaseViewController.m */,
+				D79DE1162051314400367CEE /* PrefixHeader.pch */,
+				D79DE0E520512AD600367CEE /* Main.storyboard */,
+				D79DE0E820512AD600367CEE /* Assets.xcassets */,
+				D79DE0EA20512AD600367CEE /* LaunchScreen.storyboard */,
+				D79DE0ED20512AD600367CEE /* Info.plist */,
+				D79DE0EE20512AD600367CEE /* main.m */,
+			);
+			path = LYPShareCartoolManager;
+			sourceTree = "<group>";
+		};
+		D79DE0F720512AD600367CEE /* LYPShareCartoolManagerTests */ = {
+			isa = PBXGroup;
+			children = (
+				D79DE0F820512AD600367CEE /* LYPShareCartoolManagerTests.m */,
+				D79DE0FA20512AD600367CEE /* Info.plist */,
+			);
+			path = LYPShareCartoolManagerTests;
+			sourceTree = "<group>";
+		};
+		D79DE10220512AD600367CEE /* LYPShareCartoolManagerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D79DE10320512AD600367CEE /* LYPShareCartoolManagerUITests.m */,
+				D79DE10520512AD600367CEE /* Info.plist */,
+			);
+			path = LYPShareCartoolManagerUITests;
+			sourceTree = "<group>";
+		};
+		D79DE11120512FF800367CEE /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				D775997B205FB180009DCFD7 /* 清洁工 */,
+				D76E46852064F2BB006E965E /* 管理员 */,
+				D78A8AF72052229C000C8148 /* NetworkTool */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		D7B2CA94206B68DA00CC933D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			path = View/View;
+			sourceTree = "<group>";
+		};
+		E78426B5FA959D4813CB3D4A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				18A69A11E134569B1B601457 /* Pods-LYPShareCartoolManager.debug.xcconfig */,
+				C79874D679B716274A6D25F4 /* Pods-LYPShareCartoolManager.release.xcconfig */,
+				05310530EAD597EC4BDD4A9E /* Pods-LYPShareCartoolManagerTests.debug.xcconfig */,
+				8DBF446A0629C433D40F40D3 /* Pods-LYPShareCartoolManagerTests.release.xcconfig */,
+				C18B1337CE033F6FBCCF7DFB /* Pods-LYPShareCartoolManagerUITests.debug.xcconfig */,
+				99D3994DBC2F17BEC5B864F2 /* Pods-LYPShareCartoolManagerUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D79DE0DB20512AD600367CEE /* LYPShareCartoolManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D79DE10820512AD600367CEE /* Build configuration list for PBXNativeTarget "LYPShareCartoolManager" */;
+			buildPhases = (
+				88642C9AA791E727A8825C3D /* [CP] Check Pods Manifest.lock */,
+				D79DE0D820512AD600367CEE /* Sources */,
+				D79DE0D920512AD600367CEE /* Frameworks */,
+				D79DE0DA20512AD600367CEE /* Resources */,
+				2F721C4D9E0418354654B73A /* [CP] Embed Pods Frameworks */,
+				B83932D236CF85A2CC87C50D /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LYPShareCartoolManager;
+			productName = LYPShareCartoolManager;
+			productReference = D79DE0DC20512AD600367CEE /* LYPShareCartoolManager.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D79DE0F320512AD600367CEE /* LYPShareCartoolManagerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D79DE10B20512AD600367CEE /* Build configuration list for PBXNativeTarget "LYPShareCartoolManagerTests" */;
+			buildPhases = (
+				882AF2C7A51411B2C443D061 /* [CP] Check Pods Manifest.lock */,
+				D79DE0F020512AD600367CEE /* Sources */,
+				D79DE0F120512AD600367CEE /* Frameworks */,
+				D79DE0F220512AD600367CEE /* Resources */,
+				449898018D29DFD1658F2F6C /* [CP] Embed Pods Frameworks */,
+				5247C10D4BCDED287DD55117 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D79DE0F620512AD600367CEE /* PBXTargetDependency */,
+			);
+			name = LYPShareCartoolManagerTests;
+			productName = LYPShareCartoolManagerTests;
+			productReference = D79DE0F420512AD600367CEE /* LYPShareCartoolManagerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D79DE0FE20512AD600367CEE /* LYPShareCartoolManagerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D79DE10E20512AD600367CEE /* Build configuration list for PBXNativeTarget "LYPShareCartoolManagerUITests" */;
+			buildPhases = (
+				D6E2CDB482C4C6BF4AF0EFD5 /* [CP] Check Pods Manifest.lock */,
+				D79DE0FB20512AD600367CEE /* Sources */,
+				D79DE0FC20512AD600367CEE /* Frameworks */,
+				D79DE0FD20512AD600367CEE /* Resources */,
+				0EB0F6A61AE41E130E17EEF9 /* [CP] Embed Pods Frameworks */,
+				A228D02AB6424E6781887718 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D79DE10120512AD600367CEE /* PBXTargetDependency */,
+			);
+			name = LYPShareCartoolManagerUITests;
+			productName = LYPShareCartoolManagerUITests;
+			productReference = D79DE0FF20512AD600367CEE /* LYPShareCartoolManagerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D79DE0D420512AD600367CEE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = LYP;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = laiyongpeng;
+				TargetAttributes = {
+					D79DE0DB20512AD600367CEE = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+						};
+					};
+					D79DE0F320512AD600367CEE = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D79DE0DB20512AD600367CEE;
+					};
+					D79DE0FE20512AD600367CEE = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D79DE0DB20512AD600367CEE;
+					};
+				};
+			};
+			buildConfigurationList = D79DE0D720512AD600367CEE /* Build configuration list for PBXProject "LYPShareCartoolManager" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D79DE0D320512AD600367CEE;
+			productRefGroup = D79DE0DD20512AD600367CEE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D79DE0DB20512AD600367CEE /* LYPShareCartoolManager */,
+				D79DE0F320512AD600367CEE /* LYPShareCartoolManagerTests */,
+				D79DE0FE20512AD600367CEE /* LYPShareCartoolManagerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D79DE0DA20512AD600367CEE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7284823206B907B00E15DE5 /* ReleaseNotes.txt in Resources */,
+				D78775FC206A848000425BFF /* LYPPersonCycTableViewCell.xib in Resources */,
+				D787763A206A84DF00425BFF /* LYPLoginVC.storyboard in Resources */,
+				D74D74D3206DDA570019F2DA /* LYPModifyLocationView.xib in Resources */,
+				D79DE0EC20512AD600367CEE /* LaunchScreen.storyboard in Resources */,
+				D79DE0E920512AD600367CEE /* Assets.xcassets in Resources */,
+				D7371FA0206D280B007D151C /* LYPLocationView.xib in Resources */,
+				D79DE0E720512AD600367CEE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D79DE0F220512AD600367CEE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D79DE0FD20512AD600367CEE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0EB0F6A61AE41E130E17EEF9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LYPShareCartoolManagerUITests/Pods-LYPShareCartoolManagerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2F721C4D9E0418354654B73A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LYPShareCartoolManager/Pods-LYPShareCartoolManager-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		449898018D29DFD1658F2F6C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LYPShareCartoolManagerTests/Pods-LYPShareCartoolManagerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5247C10D4BCDED287DD55117 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LYPShareCartoolManagerTests/Pods-LYPShareCartoolManagerTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		882AF2C7A51411B2C443D061 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LYPShareCartoolManagerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		88642C9AA791E727A8825C3D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LYPShareCartoolManager-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A228D02AB6424E6781887718 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LYPShareCartoolManagerUITests/Pods-LYPShareCartoolManagerUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B83932D236CF85A2CC87C50D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LYPShareCartoolManager/Pods-LYPShareCartoolManager-resources.sh",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LYPShareCartoolManager/Pods-LYPShareCartoolManager-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6E2CDB482C4C6BF4AF0EFD5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LYPShareCartoolManagerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D79DE0D820512AD600367CEE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D77469F5206CC00A00804C40 /* SheetView.m in Sources */,
+				D7877627206A84AA00425BFF /* SVStatusHUD.m in Sources */,
+				D7759991205FB526009DCFD7 /* TopCollectionViewCell.m in Sources */,
+				D7877630206A84BB00425BFF /* KKAnimateViewController.m in Sources */,
+				D775999B205FB554009DCFD7 /* ContentTableFooter.m in Sources */,
+				D7877609206A848B00425BFF /* LYPloginModel.m in Sources */,
+				D787763B206A84DF00425BFF /* LYPRegisterVC.m in Sources */,
+				D7877626206A84AA00425BFF /* LYPSavePList.m in Sources */,
+				D7877610206A849C00425BFF /* LYPPersonMainVC.m in Sources */,
+				D74D74D1206DDA3C0019F2DA /* LYPModifyLocationView.m in Sources */,
+				D77C8D6420623BEC00D874A8 /* LYPCleanToolCell.m in Sources */,
+				D775999D205FB554009DCFD7 /* ContentCollectionViewCell.m in Sources */,
+				D775999A205FB554009DCFD7 /* JContentTableViewCell.m in Sources */,
+				D7877624206A84AA00425BFF /* XMGSqliteTool.m in Sources */,
+				D7877622206A84AA00425BFF /* XMGModel.m in Sources */,
+				D77C8D6A20623E2300D874A8 /* LYPToolModel.m in Sources */,
+				D77469F4206CC00A00804C40 /* ContentViewCell.m in Sources */,
+				D78775EC206A845700425BFF /* StringEXtension.m in Sources */,
+				D7877608206A848B00425BFF /* LYPErrorModel.m in Sources */,
+				D7759984205FB34E009DCFD7 /* LYPCleanMainVC.m in Sources */,
+				D74D74DA206E3AE70019F2DA /* LYPPaperModel.m in Sources */,
+				D7877631206A84BB00425BFF /* KKNavController.m in Sources */,
+				D78775FB206A848000425BFF /* LYPPersonCycTableViewCell.m in Sources */,
+				D78775EB206A845700425BFF /* LYPPromptView.m in Sources */,
+				D787760F206A849C00425BFF /* LYPMessageMainVC.m in Sources */,
+				D78775F1206A845700425BFF /* UpAndLowerButtonPlace.m in Sources */,
+				D7877632206A84BB00425BFF /* KKSliderMenuTool.m in Sources */,
+				D76E46912064F7FE006E965E /* LYPManagerToolVC.m in Sources */,
+				D78775EE206A845700425BFF /* UIBarButtonItem+Extension.m in Sources */,
+				D79DE0E420512AD600367CEE /* BaseViewController.m in Sources */,
+				D7877625206A84AA00425BFF /* XMGTable.m in Sources */,
+				D728483B206B970C00E15DE5 /* LYPDeviceListModel.m in Sources */,
+				D787760A206A848B00425BFF /* LYPTokenModel.m in Sources */,
+				D76E468B2064F3DF006E965E /* LYPManagerVC.m in Sources */,
+				D74D74D6206E1DBF0019F2DA /* LYPSureOperationVC.m in Sources */,
+				D78775ED206A845700425BFF /* UIAlertController+Block.m in Sources */,
+				D78775EF206A845700425BFF /* UIImage+Extention.m in Sources */,
+				D78775F2206A845700425BFF /* YPLeftAndRightButton.m in Sources */,
+				D7371F9A206D2694007D151C /* UIView+Extension.m in Sources */,
+				D77C8D792062622100D874A8 /* LYPCleanHomePageVC.m in Sources */,
+				D7877628206A84AA00425BFF /* UIViewController+DismissKeyboard.m in Sources */,
+				D78A8AFA205222F5000C8148 /* LYPNetWorkTool.m in Sources */,
+				D79DE0EF20512AD600367CEE /* main.m in Sources */,
+				D775999C205FB554009DCFD7 /* JContentTableView.m in Sources */,
+				D7759990205FB526009DCFD7 /* TopCollectionView.m in Sources */,
+				D78775EA206A845700425BFF /* LYPCustomButton.m in Sources */,
+				D78775F0206A845700425BFF /* UIView+Extension.m in Sources */,
+				D775998B205FB519009DCFD7 /* JoeExcelView.m in Sources */,
+				D77C8D6720623C0900D874A8 /* LYPCleanToolView.m in Sources */,
+				D77C8D7C2062628D00D874A8 /* LYPCleanHomeCell.m in Sources */,
+				D7877623206A84AA00425BFF /* XMGSqliteModelTool.m in Sources */,
+				D74D74DD206E3AF30019F2DA /* LYPPaperDataMOdel.m in Sources */,
+				D728483C206B970C00E15DE5 /* LYPDataListModel.m in Sources */,
+				D7371F9B206D2694007D151C /* YPPopView.m in Sources */,
+				D76E468E2064F4D3006E965E /* LYPmanagerExcelVC.m in Sources */,
+				D78775FD206A848000425BFF /* LYPPersonHeadView.m in Sources */,
+				D7877639206A84DF00425BFF /* LYPLoginVC.m in Sources */,
+				D79DE0E120512AD600367CEE /* AppDelegate.m in Sources */,
+				D78775FE206A848000425BFF /* LYPPersonTableViewCell.m in Sources */,
+				D7371F9E206D27C3007D151C /* LYPLocationView.m in Sources */,
+				D787763E206A84FE00425BFF /* LYPUserSingle.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D79DE0F020512AD600367CEE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D79DE0F920512AD600367CEE /* LYPShareCartoolManagerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D79DE0FB20512AD600367CEE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D79DE10420512AD600367CEE /* LYPShareCartoolManagerUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D79DE0F620512AD600367CEE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D79DE0DB20512AD600367CEE /* LYPShareCartoolManager */;
+			targetProxy = D79DE0F520512AD600367CEE /* PBXContainerItemProxy */;
+		};
+		D79DE10120512AD600367CEE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D79DE0DB20512AD600367CEE /* LYPShareCartoolManager */;
+			targetProxy = D79DE10020512AD600367CEE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D79DE0E520512AD600367CEE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D79DE0E620512AD600367CEE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D79DE0EA20512AD600367CEE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D79DE0EB20512AD600367CEE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D79DE10620512AD600367CEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D79DE10720512AD600367CEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D79DE10920512AD600367CEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18A69A11E134569B1B601457 /* Pods-LYPShareCartoolManager.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DN43523GZM;
+				GCC_PREFIX_HEADER = /Users/navchina/Desktop/LYPShareCartoolManager/LYPShareCartoolManager/PrefixHeader.pch;
+				INFOPLIST_FILE = LYPShareCartoolManager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LYPShareCartoolManager/sdk/idfa",
+					"$(PROJECT_DIR)/LYPShareCartoolManager/sdk",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "animal.--";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D79DE10A20512AD600367CEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C79874D679B716274A6D25F4 /* Pods-LYPShareCartoolManager.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DN43523GZM;
+				GCC_PREFIX_HEADER = /Users/navchina/Desktop/LYPShareCartoolManager/LYPShareCartoolManager/PrefixHeader.pch;
+				INFOPLIST_FILE = LYPShareCartoolManager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LYPShareCartoolManager/sdk/idfa",
+					"$(PROJECT_DIR)/LYPShareCartoolManager/sdk",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "animal.--";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D79DE10C20512AD600367CEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05310530EAD597EC4BDD4A9E /* Pods-LYPShareCartoolManagerTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DN43523GZM;
+				INFOPLIST_FILE = LYPShareCartoolManagerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = animal.LYPShareCartoolManagerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LYPShareCartoolManager.app/LYPShareCartoolManager";
+			};
+			name = Debug;
+		};
+		D79DE10D20512AD600367CEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8DBF446A0629C433D40F40D3 /* Pods-LYPShareCartoolManagerTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DN43523GZM;
+				INFOPLIST_FILE = LYPShareCartoolManagerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = animal.LYPShareCartoolManagerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LYPShareCartoolManager.app/LYPShareCartoolManager";
+			};
+			name = Release;
+		};
+		D79DE10F20512AD600367CEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C18B1337CE033F6FBCCF7DFB /* Pods-LYPShareCartoolManagerUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DN43523GZM;
+				INFOPLIST_FILE = LYPShareCartoolManagerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = animal.LYPShareCartoolManagerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LYPShareCartoolManager;
+			};
+			name = Debug;
+		};
+		D79DE11020512AD600367CEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99D3994DBC2F17BEC5B864F2 /* Pods-LYPShareCartoolManagerUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DN43523GZM;
+				INFOPLIST_FILE = LYPShareCartoolManagerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = animal.LYPShareCartoolManagerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LYPShareCartoolManager;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D79DE0D720512AD600367CEE /* Build configuration list for PBXProject "LYPShareCartoolManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D79DE10620512AD600367CEE /* Debug */,
+				D79DE10720512AD600367CEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D79DE10820512AD600367CEE /* Build configuration list for PBXNativeTarget "LYPShareCartoolManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D79DE10920512AD600367CEE /* Debug */,
+				D79DE10A20512AD600367CEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D79DE10B20512AD600367CEE /* Build configuration list for PBXNativeTarget "LYPShareCartoolManagerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D79DE10C20512AD600367CEE /* Debug */,
+				D79DE10D20512AD600367CEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D79DE10E20512AD600367CEE /* Build configuration list for PBXNativeTarget "LYPShareCartoolManagerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D79DE10F20512AD600367CEE /* Debug */,
+				D79DE11020512AD600367CEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D79DE0D420512AD600367CEE /* Project object */;
+}
