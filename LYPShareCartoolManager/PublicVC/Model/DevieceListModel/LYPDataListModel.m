@@ -7,7 +7,11 @@
 //
 
 #import "LYPDataListModel.h"
-
+#import "LYPDevicesModel.h"
 @implementation LYPDataListModel
+
++(NSDictionary *)mj_objectClassInArray{
+    return @{@"devices":[LYPDevicesModel class]};
+}
 
 @end

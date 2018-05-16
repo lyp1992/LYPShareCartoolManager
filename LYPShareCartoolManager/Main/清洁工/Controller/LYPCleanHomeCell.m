@@ -36,10 +36,17 @@
     self.imageV.frame = CGRectMake(self.width - 5, 0, 5, 5);
     self.label.frame = CGRectMake(0, 0, self.width, self.height);
 }
--(void)setTitleStr:(NSString *)titleStr{
-    _titleStr = titleStr;
-    self.label.text = titleStr;
+//-(void)setTitleStr:(NSString *)titleStr{
+//    _titleStr = titleStr;
+//    self.label.text = titleStr;
+//}
+
+-(void)setBuildListModel:(LYPBuildListModel *)buildListModel{
+    _buildListModel = buildListModel;
+   
+    self.label.text = [NSString stringWithFormat:@"大楼:%@  楼层：%d",buildListModel.build, buildListModel.floor];
 }
+
 
 -(UILabel *)label{
     if (!_label) {

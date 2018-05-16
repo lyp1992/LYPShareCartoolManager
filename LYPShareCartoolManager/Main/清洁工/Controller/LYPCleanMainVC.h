@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "SheetView.h"
+@class LYPBuildListModel;
 @interface LYPCleanMainVC : BaseViewController<SheetViewDelegate, SheetViewDataSource>
+
+@property (nonatomic, strong) LYPBuildListModel *buildListModel;
 
 @end

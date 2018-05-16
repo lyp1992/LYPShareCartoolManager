@@ -14,7 +14,6 @@ typedef CGSize(^sizeForItemAtIndexPathBlock)(UICollectionViewLayout * collection
 typedef void(^ContentViewCellDidScrollBlock)(UIScrollView *scroll);
 typedef BOOL(^cellWithColorAtIndexPathBlock)(NSIndexPath *indexPath);
 typedef void(^didSelectItemBlock)(NSIndexPath *indexPath);
-typedef void(^longTapGestureBlock)(NSIndexPath *indexPath);
 
 @interface ContentViewCell : UITableViewCell
 @property (nonatomic, strong) cellForItemAtIndexPathBlock cellForItemBlock;
@@ -23,7 +22,6 @@ typedef void(^longTapGestureBlock)(NSIndexPath *indexPath);
 @property (nonatomic, strong) ContentViewCellDidScrollBlock contentViewCellDidScrollBlock;
 @property (nonatomic, strong) cellWithColorAtIndexPathBlock cellWithColorBlock;
 @property (nonatomic, strong) didSelectItemBlock cellDidSelectBlock;
-@property (nonatomic, strong) longTapGestureBlock cellLongTapGestureBlock;
 
 @property (nonatomic, strong) UICollectionView *cellCollectionView;
 @end

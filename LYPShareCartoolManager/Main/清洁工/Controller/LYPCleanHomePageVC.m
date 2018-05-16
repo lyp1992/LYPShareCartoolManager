@@ -14,11 +14,16 @@
 
 #import "LYPCleanMainVC.h"
 
+#import "LYPBuildListModel.h"
+#import "LYPBuildDataModel.h"
+
 @interface LYPCleanHomePageVC ()<UICollectionViewDelegate ,UICollectionViewDataSource>
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 
 @property (nonatomic, strong) NSArray *numArr;
+
+@property (nonatomic, strong) LYPBuildDataModel *dataModel;
 
 @end
 
@@ -27,9 +32,13 @@ static NSString *cleanHomeCellId = @"cleanHomeCellId";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.numArr = @[@"A区男厕",@"A区女厕",@"B区男厕",@"B区女厕"];
+    
+//    self.numArr = @[@"A区男厕",@"A区女厕",@"B区男厕",@"B区女厕"];
     
     [self setNavBar];//导航栏
+////    获取数据
+//    [self setUPData];
+    
     [self setupUI];
 }
 
@@ -44,6 +53,10 @@ static NSString *cleanHomeCellId = @"cleanHomeCellId";
     [self.collectionView registerClass:[LYPCleanHomeCell class] forCellWithReuseIdentifier:cleanHomeCellId];
     self.collectionView.backgroundColor = RGBACOLOR(236, 236, 236, 1);
     [self.view addSubview:self.collectionView];
+    
+
+    self.collectionView.mj_header = [MJRefreshStateHeader  headerWithRefreshingTarget:self refreshingAction:@selector(refreshData)];
+    [self.collectionView.mj_header beginRefreshing];
 }
 
 -(void)setNavBar{
@@ -53,6 +66,29 @@ static NSString *cleanHomeCellId = @"cleanHomeCellId";
     self.title = @"共享纸盒"; self.navigationController.navigationBar.backgroundColor =  RGBACOLOR(43, 45, 51, 1);
 
 }
+
+-(void)setUPData{
+    
+    LYPNetWorkTool *netTool = [[LYPNetWorkTool alloc]init];
+    [netTool getBuildFloorListWithDic:nil success:^(id responseData, NSInteger responseCode) {
+        [self.collectionView.mj_header endRefreshing];
+        LYPBuildDataModel *dataModel = [LYPBuildDataModel mj_objectWithKeyValues:responseData];
+        if ([StringEXtension isBlankString:dataModel.error.msg]) {
+            self.dataModel = dataModel;
+            [self.collectionView reloadData];
+        }else{
+            [SVStatusHUD showWithStatus:dataModel.error.msg];
+        }
+        
+    } failure:^(id responseData, NSInteger responseCode) {
+        [self.collectionView.mj_header endRefreshing];
+    }];
+}
+
+-(void)refreshData{
+    [self setUPData];
+}
+
 #pragma method
 -(void)showPersonVC{
     
@@ -70,12 +106,12 @@ static NSString *cleanHomeCellId = @"cleanHomeCellId";
 
 #pragma mark --UICollectionViewDelegate
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return self.numArr.count;
+    return self.dataModel.data.count;
 }
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
     LYPCleanHomeCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cleanHomeCellId forIndexPath:indexPath];
-    cell.titleStr = self.numArr[indexPath.item];
+    cell.buildListModel = self.dataModel.data[indexPath.row];
     return cell;
 }
 
@@ -92,6 +128,7 @@ static NSString *cleanHomeCellId = @"cleanHomeCellId";
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     
     LYPCleanMainVC *cleanMainVC = [[LYPCleanMainVC alloc]init];
+    cleanMainVC.buildListModel = self.dataModel.data[indexPath.item];
     [self.navigationController pushViewController:cleanMainVC animated:YES];
 }
 

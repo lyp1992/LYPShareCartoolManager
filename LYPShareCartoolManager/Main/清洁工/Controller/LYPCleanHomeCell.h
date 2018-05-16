@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "LYPBuildListModel.h"
 @interface LYPCleanHomeCell : UICollectionViewCell
 
 @property (nonatomic, copy) NSString *titleStr;
+
+@property (nonatomic, strong) LYPBuildListModel *buildListModel;
 
 @end

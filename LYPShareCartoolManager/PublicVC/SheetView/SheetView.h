@@ -26,7 +26,6 @@
 @optional
 //返回表格某行是否需要填充颜色
 - (BOOL)sheetView:(SheetView *)sheetView cellWithColorAtIndexRow:(NSIndexPath *)indexRow;
-
 @end
 
 @protocol SheetViewDelegate <NSObject>
@@ -37,13 +36,6 @@
 - (CGFloat)sheetView:(SheetView *)sheetView widthForColAtIndexPath:(NSIndexPath *)indexPath;
 
 - (void)sheetView:(SheetView *)sheetView didSelectItemAtIndexRow:(NSIndexPath *)indexRow indexCol:(NSIndexPath *)indexCol;
-
-@optional
-//点击了顶部item
--(void)sheetView:(SheetView *)sheetView didSelectTopItemIndexCol:(NSIndexPath *)indexCol;
-//长按显示表格
--(void)sheetView:(SheetView *)sheetView longTapGestureAtIndexRow:(NSIndexPath *)indexRow indexCol:(NSIndexPath *)indexCol;
-
 @end
 
 @interface SheetView : UIView
@@ -54,6 +46,7 @@
 
 @property (nonatomic, assign) CGFloat titleColWidth;//左侧标题列宽度（必须设置）
 @property (nonatomic, assign) CGFloat titleRowHeight;//上边标题行高度（必须设置）
+@property (nonatomic, assign) NSIndexPath* tableViewIndexPath;
 
 //表格刷新
 - (void)reloadData;

@@ -20,6 +20,9 @@ typedef void(^failureBlock)(id responseData, NSInteger responseCode);
 //获取手机验证码
 -(void)getVerificationCodeWithDic:(NSDictionary *)parames success:(successBlock)success failure:(failureBlock)failure;
 
+//获取建筑楼层分布
+-(void)getBuildFloorListWithDic:(NSDictionary *)parames success:(successBlock)success failure:(failureBlock)failure;
+
 //获取设备列表
 -(void)getEquipmentListWithDic:(NSDictionary *)parames success:(successBlock)success failure:(failureBlock)failure;
 
@@ -34,9 +37,15 @@ typedef void(^failureBlock)(id responseData, NSInteger responseCode);
 //获取纸品列表
 -(void)getPaperListWithDic:(NSDictionary *)parames success:(successBlock)success failure:(failureBlock)failure;
 
+//获取未完成的操作设备
+-(void)getUnfinishDeviceListWithDic:(NSDictionary *)parames success:(successBlock)success failure:(failureBlock)failure;
+
+//设备校准
+-(void)SetLocationWithDic:(NSDictionary *)parames success:(successBlock)success failure:(failureBlock)failure;
+
 //换电池记录
 -(void)inBatteryRecordWithDic:(NSDictionary *)parames success:(successBlock)success failure:(failureBlock)failure;
 //换纸记录
-
 -(void)InPaperRecordsWithDic:(NSDictionary *)parames success:(successBlock)success failure:(failureBlock)failure;
+
 @end

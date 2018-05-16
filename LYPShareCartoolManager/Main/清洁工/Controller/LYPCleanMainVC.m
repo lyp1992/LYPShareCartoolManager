@@ -15,13 +15,16 @@
 
 #import "LYPDeviceListModel.h"
 #import "LYPSureOperationVC.h"
+#import "LYPDevicesModel.h"
+#import "LYPDataListModel.h"
+#import "LYPBuildListModel.h"
 
 @interface LYPCleanMainVC ()<UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic,strong) NSArray *titleArr;
 @property (nonatomic, strong) LYPDeviceListModel *listModel;
 @property (nonatomic, strong) UIView *containToolView;
-
+@property (nonatomic, strong) UITableView *tableview;
 @end
 
 @implementation LYPCleanMainVC
@@ -37,25 +40,28 @@
     tableView.dataSource = self;
     tableView.delegate = self;
     [self.view addSubview:tableView];
+    self.tableview = tableView;
     
-    SheetView *sheetView = [[SheetView alloc] initWithFrame:CGRectMake(0,64+45, self.view.frame.size.width, self.view.frame.size.height-64-45-45)];
-    sheetView.dataSource = self;
-    sheetView.delegate = self;
-    sheetView.sheetHead = @"序号";
-    sheetView.titleRowHeight = 60;
-    sheetView.titleColWidth = 100;
-    [self.view addSubview:sheetView];
+//    SheetView *sheetView = [[SheetView alloc] initWithFrame:CGRectMake(0,64+45, self.view.frame.size.width, self.view.frame.size.height-64-45-45)];
+//    sheetView.dataSource = self;
+//    sheetView.delegate = self;
+//    sheetView.sheetHead = @"序号";
+//    sheetView.titleRowHeight = 60;
+//    sheetView.titleColWidth = 100;
+//    [self.view addSubview:sheetView];
     
 //    请求数据
     LYPNetWorkTool *netWorkTool = [[LYPNetWorkTool alloc]init];
     [SVProgressHUD showWithStatus:@"正在请求数据"];
-    [netWorkTool getEquipmentListWithDic:nil success:^(id responseData, NSInteger responseCode) {
+    NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:@(self.buildListModel.buildId),@"buildId",@(self.buildListModel.floor),@"floor", nil];
+    [netWorkTool getEquipmentListWithDic:dic success:^(id responseData, NSInteger responseCode) {
         [SVProgressHUD dismiss];
         self.listModel = [LYPDeviceListModel mj_objectWithKeyValues:responseData];
         if (![StringEXtension isBlankString:self.listModel.error.msg]) {
             [SVStatusHUD showWithStatus:self.listModel.error.msg];
         }else{
-            [sheetView reloadData];
+//            [sheetView reloadData];
+            [self.tableview reloadData];
         }
         
     } failure:^(id responseData, NSInteger responseCode) {
@@ -148,12 +154,63 @@
 }
 
 #pragma mark --UITableViewDelegate;
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return self.listModel.data.count;
+}
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+//    LYPDataListModel *dataListModel = self.listModel.data[section];
+//    return dataListModel.devices.count;
+    return 1;
+}
 
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString *cellID = @"tableViewID";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    if (!cell) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
+    }
+    for (UIView *view in cell.contentView.subviews) {
+        [view removeFromSuperview];
+    }
+    LYPDataListModel *dataListModel = self.listModel.data[indexPath.section];
+    //    60 * arr.count
+    SheetView *sheetView = [[SheetView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 60 * (dataListModel.devices.count +1))];
+    sheetView.dataSource = self;
+    sheetView.delegate = self;
+    sheetView.sheetHead = @"序号";
+    sheetView.titleRowHeight = 60;
+    sheetView.titleColWidth = 60;
+    sheetView.tableViewIndexPath = indexPath;
+    [cell.contentView addSubview:sheetView];
+    
+    return cell;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    LYPDataListModel *dataListModel = self.listModel.data[indexPath.section];
+    return 60 * (dataListModel.devices.count+1);
+    
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 45;
+}
+
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    UIView *containView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 45)];
+    
+    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, tableView.frame.size.height, 45)];
+     LYPDataListModel *dataListModel = self.listModel.data[section];
+    label.text = dataListModel.location;
+    [containView addSubview:label];
+    
+    return containView;
+}
 
 #pragma mark --sheetDelegate
 - (NSInteger)sheetView:(SheetView *)sheetView numberOfRowsInSection:(NSInteger)section
 {
-    return self.listModel.data.count;
+      LYPDataListModel *dataListModel = self.listModel.data[sheetView.tableViewIndexPath.section];
+    return dataListModel.devices.count;
 }
 - (NSInteger)sheetView:(SheetView *)sheetView numberOfColsInSection:(NSInteger)section
 {
@@ -161,7 +218,8 @@
 }
 - (NSString *)sheetView:(SheetView *)sheetView cellForContentItemAtIndexRow:(NSIndexPath *)indexRow indexCol:(NSIndexPath *)indexCol
 {
-    LYPDataListModel *model = self.listModel.data[indexRow.row];
+    LYPDataListModel *dataListModel = self.listModel.data[sheetView.tableViewIndexPath.section];
+    LYPDevicesModel *model = dataListModel.devices[indexRow.row];
     NSString *rowStr;
     switch (indexCol.row) {
         case 0:{
@@ -237,7 +295,8 @@
     if (!(indexCol.row == 7 || indexCol.row == 8)) {
         return;
     }
-    LYPDataListModel *dataModel = self.listModel.data[indexRow.row];
+    LYPDataListModel *dataListModel = self.listModel.data[sheetView.tableViewIndexPath.section];
+    LYPDevicesModel *dataModel = dataListModel.devices[indexRow.row];
 //    if (dataModel.online == 0) {
 //        [SVStatusHUD showWithStatus:@"设备出错了"];
 //        return;

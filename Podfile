@@ -12,6 +12,7 @@ pod 'AFNetworking', '~> 3.1.0'
 pod 'MJExtension', '~> 3.0.13'
 pod 'JZLocationConverter', '~> 1.0.0'
 pod 'SVProgressHUD', '~> 2.2'
+pod 'MJRefresh', '~> 3.1.12'
 
   target 'LYPShareCartoolManagerTests' do
     inherit! :search_paths

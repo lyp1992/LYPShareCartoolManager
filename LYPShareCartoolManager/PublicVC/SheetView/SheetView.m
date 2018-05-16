@@ -50,10 +50,9 @@ static NSString *contentViewCellId = @"content.tableview.cell";
         self.leftView.dataSource = self;
         self.leftView.delegate = self;
         self.leftView.showsVerticalScrollIndicator = NO;
-        self.leftView.backgroundColor = RGBACOLOR(236, 236, 236, 1);
-//        [UIColor colorWithRed:(0x90 / 255.0)green:(0x90 / 255.0)blue:(0x90 / 255.0)alpha:1];
-//        self.leftView.layer.borderColor = [UIColor colorWithRed:(0x90 / 255.0)green:(0x90 / 255.0)blue:(0x90 / 255.0)alpha:1].CGColor;
-//        self.leftView.layer.borderWidth = 1.0f;
+        self.leftView.backgroundColor = [UIColor colorWithRed:(0x90 / 255.0)green:(0x90 / 255.0)blue:(0x90 / 255.0)alpha:1];
+        self.leftView.layer.borderColor = [UIColor colorWithRed:(0x90 / 255.0)green:(0x90 / 255.0)blue:(0x90 / 255.0)alpha:1].CGColor;
+        self.leftView.layer.borderWidth = 1.0f;
         self.leftView.separatorStyle = UITableViewCellSeparatorStyleNone;
         
         UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
@@ -65,8 +64,7 @@ static NSString *contentViewCellId = @"content.tableview.cell";
         self.topView.delegate = self;
         self.topView.showsHorizontalScrollIndicator = NO;
         [self.topView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:topViewCellId];
-        self.topView.backgroundColor = RGBACOLOR(236, 236, 236, 1);
-//        [UIColor colorWithRed:(0x90 / 255.0)green:(0x90 / 255.0)blue:(0x90 / 255.0)alpha:1];
+        self.topView.backgroundColor = [UIColor colorWithRed:(0x90 / 255.0)green:(0x90 / 255.0)blue:(0x90 / 255.0)alpha:1];
         self.topView.layer.borderColor = [UIColor colorWithRed:(0x90 / 255.0)green:(0x90 / 255.0)blue:(0x90 / 255.0)alpha:1].CGColor;
         self.topView.layer.borderWidth = 1.0f;
         
@@ -74,9 +72,9 @@ static NSString *contentViewCellId = @"content.tableview.cell";
         self.contentView.dataSource = self;
         self.contentView.delegate = self;
         self.contentView.showsVerticalScrollIndicator = NO;
+        self.contentView.bounces = NO;
         self.contentView.separatorStyle = UITableViewCellSeparatorStyleNone;
-        self.contentView.backgroundColor = RGBACOLOR(236, 236, 236, 1);
-//        [UIColor colorWithRed:(0x90 / 255.0)green:(0x90 / 255.0)blue:(0x90 / 255.0)alpha:1];
+//        self.contentView.backgroundColor = [UIColor colorWithRed:(0x90 / 255.0)green:(0x90 / 255.0)blue:(0x90 / 255.0)alpha:1];
         
         [self addSubview:self.leftView];
         [self addSubview:self.topView];
@@ -155,8 +153,7 @@ static NSString *contentViewCellId = @"content.tableview.cell";
         for (UIView *view in leftCell.contentView.subviews) {
             [view removeFromSuperview];
         }
-        leftCell.backgroundColor = RGBACOLOR(236, 236, 236, 1);
-//        [UIColor colorWithRed:(0xf0 / 255.0)green:(0xf0 / 255.0)blue:(0xf0 / 255.0)alpha:1];
+        leftCell.backgroundColor = [UIColor colorWithRed:(0xf0 / 255.0)green:(0xf0 / 255.0)blue:(0xf0 / 255.0)alpha:1];
         leftCell.layer.borderColor = [UIColor colorWithRed:(0x90 / 255.0)green:(0x90 / 255.0)blue:(0x90 / 255.0)alpha:1].CGColor;
         leftCell.layer.borderWidth = 1;
         
@@ -210,15 +207,8 @@ static NSString *contentViewCellId = @"content.tableview.cell";
             [self.delegate sheetView:self didSelectItemAtIndexRow:indexPath indexCol:indexPathInner];
         }
     };
-    contentCell.cellLongTapGestureBlock = ^(NSIndexPath *indexPathInner) {
-      
-        if ([self.delegate respondsToSelector:@selector(sheetView:longTapGestureAtIndexRow:indexCol:)]) {
-            [self.delegate sheetView:self longTapGestureAtIndexRow:indexPath indexCol:indexPathInner];
-        }
-    };
     
-    contentCell.backgroundColor = RGBACOLOR(236, 236, 236, 1);
-//    [UIColor colorWithRed:(0x90 / 255.0)green:(0x90 / 255.0)blue:(0x90 / 255.0)alpha:1];
+    contentCell.backgroundColor = [UIColor colorWithRed:(0x90 / 255.0)green:(0x90 / 255.0)blue:(0x90 / 255.0)alpha:1];
     contentCell.cellCollectionView.frame = CGRectMake(0, 0, self.frame.size.width - self.titleColWidth, [self.delegate sheetView:self heightForRowAtIndexPath:indexPath]);
     [contentCell.cellCollectionView reloadData];
     
@@ -279,13 +269,6 @@ static NSString *contentViewCellId = @"content.tableview.cell";
     }
     
     return topCell;
-}
--(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    if ([self.delegate respondsToSelector:@selector(sheetView:didSelectTopItemIndexCol:)]) {
-        
-        [self.delegate sheetView:self didSelectTopItemIndexCol:indexPath];
-    }
-
 }
 
 @end

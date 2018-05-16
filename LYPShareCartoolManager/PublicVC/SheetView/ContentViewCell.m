@@ -37,23 +37,18 @@
             // Fallback on earlier versions
         }
 
-        self.cellCollectionView.backgroundColor = RGBACOLOR(236, 236, 236, 1);
-//        [UIColor colorWithRed:(0x90 / 255.0)green:(0x90 / 255.0)blue:(0x90 / 255.0)alpha:1];
-//        self.cellCollectionView.layer.borderColor = [UIColor colorWithRed:(0x90 / 255.0)green:(0x90 / 255.0)blue:(0x90 / 255.0)alpha:1].CGColor;
-//        self.cellCollectionView.layer.borderWidth = 1.0f;
+        self.cellCollectionView.backgroundColor = [UIColor colorWithRed:(0x90 / 255.0)green:(0x90 / 255.0)blue:(0x90 / 255.0)alpha:1];
+        self.cellCollectionView.layer.borderColor = [UIColor colorWithRed:(0x90 / 255.0)green:(0x90 / 255.0)blue:(0x90 / 255.0)alpha:1].CGColor;
+        self.cellCollectionView.layer.borderWidth = 1.0f;
         [self.cellCollectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"inner.cell"];
         self.cellCollectionView.dataSource = self;
         self.cellCollectionView.delegate = self;
-    
+        self.cellCollectionView.bounces = NO;
         
         [self.contentView addSubview:self.cellCollectionView];
     }
     
     return self;
-}
--(void)layoutSubviews{
-    [super layoutSubviews];
-    self.cellCollectionView.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
@@ -100,20 +95,11 @@
     CGRect rect = CGRectMake(0, 0, width, height);
     UILabel *label = [[UILabel alloc] initWithFrame:rect];
     label.text = self.cellForItemBlock(indexPath);
-    if ([label.text isEqualToString:@"YES"]) {
-        label.textColor = [UIColor redColor];
-    }else{
-        label.textColor = [UIColor blackColor];
-    }
+    label.textColor = [UIColor blackColor];
     label.textAlignment = NSTextAlignmentCenter;
     [innerCell.contentView addSubview:label];
     label.adjustsFontSizeToFitWidth = YES;
     label.numberOfLines = 0;
-    
-    UILongPressGestureRecognizer *longTap = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(longTapGesture:)];
-    longTap.minimumPressDuration = 1.5f;
-    [innerCell addGestureRecognizer:longTap];
-    
     return innerCell;
 }
 
@@ -124,22 +110,6 @@
     }
 }
 
--(void)longTapGesture:(UILongPressGestureRecognizer *)longTap{
-    if (self.cellLongTapGestureBlock) {
-        if (longTap.state == UIGestureRecognizerStateBegan) {
-
-            CGPoint location = [longTap locationInView:self];
-
-            CGPoint newPoint = CGPointMake(location.x + self.cellCollectionView.contentOffset.x, location.y +self.cellCollectionView.contentOffset.y);
-            NSIndexPath *indexPath = [self.cellCollectionView indexPathForItemAtPoint:newPoint];
-            if (indexPath == nil) {
-                return;
-            }
-            self.cellLongTapGestureBlock(indexPath);
-        }
-    }
-    
-}
 
 
 @end

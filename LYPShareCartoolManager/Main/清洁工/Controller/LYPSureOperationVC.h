@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "SheetView.h"
-@class LYPDataListModel;
+@class LYPDevicesModel;
 @interface LYPSureOperationVC : BaseViewController<SheetViewDelegate, SheetViewDataSource>
 
--(void)itemWithModel:(LYPDataListModel*)model withTopTitleArr:(NSArray *)titleArr andIndexRow:(NSIndexPath *)indexPath withIndexCol:(NSIndexPath *)indexCol IsBattery:(BOOL)isBattery;
+-(void)itemWithModel:(LYPDevicesModel*)model withTopTitleArr:(NSArray *)titleArr andIndexRow:(NSIndexPath *)indexPath withIndexCol:(NSIndexPath *)indexCol IsBattery:(BOOL)isBattery;
 
 @end

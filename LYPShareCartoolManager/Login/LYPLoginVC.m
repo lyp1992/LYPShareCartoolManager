@@ -66,13 +66,13 @@
                 }
 //                跳转到主页面
 //                1.如果是管理员
-                LYPManagerVC *managerVc = [[LYPManagerVC alloc]init];
-                UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:managerVc];
-                [self presentViewController:nav animated:YES completion:nil];
+//                LYPManagerVC *managerVc = [[LYPManagerVC alloc]init];
+//                UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:managerVc];
+//                [self presentViewController:nav animated:YES completion:nil];
 //                2.如果是清洁工
-//                LYPCleanHomePageVC *cleanVc = [[LYPCleanHomePageVC alloc]init];
-//                UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:cleanVc];
-//                [UIApplication sharedApplication].keyWindow.rootViewController = nav;
+                LYPCleanHomePageVC *cleanVc = [[LYPCleanHomePageVC alloc]init];
+                UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:cleanVc];
+                [UIApplication sharedApplication].keyWindow.rootViewController = nav;
 
             }
         } failue:^(id responseData, NSInteger responseCode) {

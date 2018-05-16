@@ -7,7 +7,7 @@
 //
 
 #import "LYPLocationView.h"
-#import "LYPDataListModel.h"
+#import "LYPDevicesModel.h"
 
 @implementation LYPLocationView
 
@@ -18,8 +18,8 @@
 
 -(void)setModel:(id)model{
     _model = model;
-    if ([model isKindOfClass:[LYPDataListModel class]]) {
-        LYPDataListModel *listModel = model;
+    if ([model isKindOfClass:[LYPDevicesModel class]]) {
+        LYPDevicesModel *listModel = model;
         self.buildLabel.text = listModel.build;
         self.floorLabel.text = [NSString stringWithFormat:@"%d",listModel.floor];
         self.toilteLabel.text = listModel.toiletType;

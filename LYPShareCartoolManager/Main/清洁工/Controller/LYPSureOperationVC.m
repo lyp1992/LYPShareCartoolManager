@@ -7,14 +7,14 @@
 //
 
 #import "LYPSureOperationVC.h"
-#import "LYPDataListModel.h"
+#import "LYPDevicesModel.h"
 #import "LYPPaperModel.h"
 #import "LYPPaperDataMOdel.h"
 
 @interface LYPSureOperationVC ()
 
 @property (nonatomic, strong) NSArray *titleArr;
-@property (nonatomic, strong) LYPDataListModel *dataModel;
+@property (nonatomic, strong) LYPDevicesModel *dataModel;
 
 @property (nonatomic, strong) LYPPaperModel *paperM;
 
@@ -180,7 +180,7 @@
     }
 }
 
--(void)itemWithModel:(LYPDataListModel *)model withTopTitleArr:(NSArray *)titleArr andIndexRow:(NSIndexPath *)indexPath withIndexCol:(NSIndexPath *)indexCol IsBattery:(BOOL)isBattery{
+-(void)itemWithModel:(LYPDevicesModel *)model withTopTitleArr:(NSArray *)titleArr andIndexRow:(NSIndexPath *)indexPath withIndexCol:(NSIndexPath *)indexCol IsBattery:(BOOL)isBattery{
     self.isBattry = isBattery;
     self.dataModel = model;
 }

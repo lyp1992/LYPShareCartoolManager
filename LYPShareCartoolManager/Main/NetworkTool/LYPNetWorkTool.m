@@ -65,7 +65,7 @@
     [manager.requestSerializer setValue:[LYPSavePList readTokenPlist] forHTTPHeaderField:@"token"];
     
     NSString *url = [NSString stringWithFormat:@"%@",deviceListUrl];
-    [manager GET:url parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [manager GET:url parameters:parames progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if ([responseObject isKindOfClass:[NSDictionary class]]) {
             success(responseObject,0);
         }
@@ -160,6 +160,55 @@
     [manager.requestSerializer setValue:[LYPSavePList readTokenPlist] forHTTPHeaderField:@"token"];
     
     [manager POST:openLockUrl2 parameters:parames progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        if ([responseObject isKindOfClass:[NSDictionary class]]) {
+            success(responseObject,0);
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        failure(error,-1);
+    }];
+}
+
+-(void)getBuildFloorListWithDic:(NSDictionary *)parames success:(successBlock)success failure:(failureBlock)failure{
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    [manager.requestSerializer setValue:APPKey forHTTPHeaderField:@"appkey"];
+    [manager.requestSerializer setValue:[LYPSavePList readTokenPlist] forHTTPHeaderField:@"token"];
+    
+    NSString *url = [NSString stringWithFormat:@"%@",buildFloorListUrl];
+    [manager GET:url parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        if ([responseObject isKindOfClass:[NSDictionary class]]) {
+            success(responseObject,0);
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        failure(error,-1);
+    }];
+}
+
+-(void)getUnfinishDeviceListWithDic:(NSDictionary *)parames success:(successBlock)success failure:(failureBlock)failure{
+    
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    [manager.requestSerializer setValue:APPKey forHTTPHeaderField:@"appkey"];
+    [manager.requestSerializer setValue:[LYPSavePList readTokenPlist] forHTTPHeaderField:@"token"];
+    
+    NSString *url = [NSString stringWithFormat:@"%@",unFinishUrl];
+    [manager GET:url parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        if ([responseObject isKindOfClass:[NSDictionary class]]) {
+            success(responseObject,0);
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        failure(error,-1);
+    }];
+    
+}
+
+-(void)SetLocationWithDic:(NSDictionary *)parames success:(successBlock)success failure:(failureBlock)failure{
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    [manager.requestSerializer setValue:APPKey forHTTPHeaderField:@"appkey"];
+    [manager.requestSerializer setValue:[LYPSavePList readTokenPlist] forHTTPHeaderField:@"token"];
+    
+    [manager POST:setLocationUrl parameters:parames progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if ([responseObject isKindOfClass:[NSDictionary class]]) {
             success(responseObject,0);
         }
