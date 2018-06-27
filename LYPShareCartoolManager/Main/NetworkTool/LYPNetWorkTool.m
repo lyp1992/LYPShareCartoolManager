@@ -57,7 +57,7 @@
 -(void)getEquipmentListWithDic:(NSDictionary *)parames success:(successBlock)success failure:(failureBlock)failure{
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    //     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/plain"];
+//    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/plain"];
     
     //    本地登录成功之后的token，appkey
     manager.requestSerializer = [AFJSONRequestSerializer serializer];

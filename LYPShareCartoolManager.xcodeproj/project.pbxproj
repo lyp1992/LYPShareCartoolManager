@@ -24,6 +24,8 @@
 		D7371F9B206D2694007D151C /* YPPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7371F99206D2693007D151C /* YPPopView.m */; };
 		D7371F9E206D27C3007D151C /* LYPLocationView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7371F9D206D27C3007D151C /* LYPLocationView.m */; };
 		D7371FA0206D280B007D151C /* LYPLocationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7371F9F206D280B007D151C /* LYPLocationView.xib */; };
+		D73F640420B162CC008220F0 /* LYPScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D73F640320B162CB008220F0 /* LYPScanViewController.m */; };
+		D73F640820B16330008220F0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D73F640720B16330008220F0 /* MapKit.framework */; };
 		D74D74D1206DDA3C0019F2DA /* LYPModifyLocationView.m in Sources */ = {isa = PBXBuildFile; fileRef = D74D74D0206DDA3C0019F2DA /* LYPModifyLocationView.m */; };
 		D74D74D3206DDA570019F2DA /* LYPModifyLocationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D74D74D2206DDA570019F2DA /* LYPModifyLocationView.xib */; };
 		D74D74D6206E1DBF0019F2DA /* LYPSureOperationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D74D74D5206E1DBF0019F2DA /* LYPSureOperationVC.m */; };
@@ -40,6 +42,9 @@
 		D775999B205FB554009DCFD7 /* ContentTableFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = D7759995205FB551009DCFD7 /* ContentTableFooter.m */; };
 		D775999C205FB554009DCFD7 /* JContentTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7759996205FB552009DCFD7 /* JContentTableView.m */; };
 		D775999D205FB554009DCFD7 /* ContentCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D7759997205FB552009DCFD7 /* ContentCollectionViewCell.m */; };
+		D777ED8C20AD69CD00AE311F /* LYPOperationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D777ED8B20AD69CD00AE311F /* LYPOperationVC.m */; };
+		D777ED8F20AD6AAC00AE311F /* LYPOperationHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = D777ED8E20AD6AAC00AE311F /* LYPOperationHeadView.m */; };
+		D777ED9120AD6B2000AE311F /* LYPOperationHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D777ED9020AD6B2000AE311F /* LYPOperationHeadView.xib */; };
 		D77C8D6420623BEC00D874A8 /* LYPCleanToolCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D77C8D6320623BEC00D874A8 /* LYPCleanToolCell.m */; };
 		D77C8D6720623C0900D874A8 /* LYPCleanToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = D77C8D6620623C0900D874A8 /* LYPCleanToolView.m */; };
 		D77C8D6A20623E2300D874A8 /* LYPToolModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D77C8D6920623E2300D874A8 /* LYPToolModel.m */; };
@@ -139,6 +144,10 @@
 		D7371F9C206D27C3007D151C /* LYPLocationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPLocationView.h; sourceTree = "<group>"; };
 		D7371F9D206D27C3007D151C /* LYPLocationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPLocationView.m; sourceTree = "<group>"; };
 		D7371F9F206D280B007D151C /* LYPLocationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LYPLocationView.xib; sourceTree = "<group>"; };
+		D737FFA520B1206300622BFF /* LYPShareCartoolManager.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LYPShareCartoolManager.entitlements; sourceTree = "<group>"; };
+		D73F640220B162CB008220F0 /* LYPScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYPScanViewController.h; sourceTree = "<group>"; };
+		D73F640320B162CB008220F0 /* LYPScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYPScanViewController.m; sourceTree = "<group>"; };
+		D73F640720B16330008220F0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		D74D74CF206DDA3C0019F2DA /* LYPModifyLocationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPModifyLocationView.h; sourceTree = "<group>"; };
 		D74D74D0206DDA3C0019F2DA /* LYPModifyLocationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPModifyLocationView.m; sourceTree = "<group>"; };
 		D74D74D2206DDA570019F2DA /* LYPModifyLocationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LYPModifyLocationView.xib; sourceTree = "<group>"; };
@@ -171,6 +180,11 @@
 		D7759997205FB552009DCFD7 /* ContentCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentCollectionViewCell.m; sourceTree = "<group>"; };
 		D7759998205FB553009DCFD7 /* ContentCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentCollectionViewCell.h; sourceTree = "<group>"; };
 		D7759999205FB554009DCFD7 /* JContentTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JContentTableView.h; sourceTree = "<group>"; };
+		D777ED8A20AD69CD00AE311F /* LYPOperationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPOperationVC.h; sourceTree = "<group>"; };
+		D777ED8B20AD69CD00AE311F /* LYPOperationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPOperationVC.m; sourceTree = "<group>"; };
+		D777ED8D20AD6AAC00AE311F /* LYPOperationHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPOperationHeadView.h; sourceTree = "<group>"; };
+		D777ED8E20AD6AAC00AE311F /* LYPOperationHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPOperationHeadView.m; sourceTree = "<group>"; };
+		D777ED9020AD6B2000AE311F /* LYPOperationHeadView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LYPOperationHeadView.xib; sourceTree = "<group>"; };
 		D77C8D6220623BEC00D874A8 /* LYPCleanToolCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPCleanToolCell.h; sourceTree = "<group>"; };
 		D77C8D6320623BEC00D874A8 /* LYPCleanToolCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPCleanToolCell.m; sourceTree = "<group>"; };
 		D77C8D6520623C0900D874A8 /* LYPCleanToolView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPCleanToolView.h; sourceTree = "<group>"; };
@@ -282,6 +296,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D73F640820B16330008220F0 /* MapKit.framework in Frameworks */,
 				D728482D206B90EF00E15DE5 /* libz.tbd in Frameworks */,
 				D728482B206B90DA00E15DE5 /* SystemConfiguration.framework in Frameworks */,
 				D7284829206B90D100E15DE5 /* CoreTelephony.framework in Frameworks */,
@@ -315,6 +330,7 @@
 		B6F6D7A56B3BC7427D868035 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D73F640720B16330008220F0 /* MapKit.framework */,
 				D728482C206B90EF00E15DE5 /* libz.tbd */,
 				D728482A206B90D900E15DE5 /* SystemConfiguration.framework */,
 				D7284828206B90D100E15DE5 /* CoreTelephony.framework */,
@@ -436,11 +452,15 @@
 		D775997C205FB18E009DCFD7 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D73F640220B162CB008220F0 /* LYPScanViewController.h */,
+				D73F640320B162CB008220F0 /* LYPScanViewController.m */,
 				D7759985205FB4B3009DCFD7 /* CleanExcel */,
 				D7759982205FB34E009DCFD7 /* LYPCleanMainVC.h */,
 				D7759983205FB34E009DCFD7 /* LYPCleanMainVC.m */,
 				D74D74D4206E1DBF0019F2DA /* LYPSureOperationVC.h */,
 				D74D74D5206E1DBF0019F2DA /* LYPSureOperationVC.m */,
+				D777ED8A20AD69CD00AE311F /* LYPOperationVC.h */,
+				D777ED8B20AD69CD00AE311F /* LYPOperationVC.m */,
 				D7759988205FB517009DCFD7 /* JoeExcel.h */,
 				D775998A205FB519009DCFD7 /* JoeExcelView.h */,
 				D7759989205FB518009DCFD7 /* JoeExcelView.m */,
@@ -693,6 +713,7 @@
 		D79DE0DE20512AD600367CEE /* LYPShareCartoolManager */ = {
 			isa = PBXGroup;
 			children = (
+				D737FFA520B1206300622BFF /* LYPShareCartoolManager.entitlements */,
 				D728481B206B907B00E15DE5 /* sdk */,
 				D7877633206A84DF00425BFF /* Login */,
 				D7877629206A84BB00425BFF /* 侧边栏 */,
@@ -745,6 +766,9 @@
 		D7B2CA94206B68DA00CC933D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D777ED8D20AD6AAC00AE311F /* LYPOperationHeadView.h */,
+				D777ED8E20AD6AAC00AE311F /* LYPOperationHeadView.m */,
+				D777ED9020AD6B2000AE311F /* LYPOperationHeadView.xib */,
 			);
 			name = View;
 			path = View/View;
@@ -846,7 +870,10 @@
 								enabled = 1;
 							};
 							com.apple.Maps.iOS = {
-								enabled = 0;
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
 							};
 						};
 					};
@@ -890,6 +917,7 @@
 				D7284823206B907B00E15DE5 /* ReleaseNotes.txt in Resources */,
 				D78775FC206A848000425BFF /* LYPPersonCycTableViewCell.xib in Resources */,
 				D787763A206A84DF00425BFF /* LYPLoginVC.storyboard in Resources */,
+				D777ED9120AD6B2000AE311F /* LYPOperationHeadView.xib in Resources */,
 				D74D74D3206DDA570019F2DA /* LYPModifyLocationView.xib in Resources */,
 				D79DE0EC20512AD600367CEE /* LaunchScreen.storyboard in Resources */,
 				D79DE0E920512AD600367CEE /* Assets.xcassets in Resources */,
@@ -1112,11 +1140,14 @@
 				D78775EF206A845700425BFF /* UIImage+Extention.m in Sources */,
 				D78775F2206A845700425BFF /* YPLeftAndRightButton.m in Sources */,
 				D7371F9A206D2694007D151C /* UIView+Extension.m in Sources */,
+				D73F640420B162CC008220F0 /* LYPScanViewController.m in Sources */,
 				D77C8D792062622100D874A8 /* LYPCleanHomePageVC.m in Sources */,
+				D777ED8C20AD69CD00AE311F /* LYPOperationVC.m in Sources */,
 				D7877628206A84AA00425BFF /* UIViewController+DismissKeyboard.m in Sources */,
 				D78A8AFA205222F5000C8148 /* LYPNetWorkTool.m in Sources */,
 				D79DE0EF20512AD600367CEE /* main.m in Sources */,
 				D775999C205FB554009DCFD7 /* JContentTableView.m in Sources */,
+				D777ED8F20AD6AAC00AE311F /* LYPOperationHeadView.m in Sources */,
 				D7759990205FB526009DCFD7 /* TopCollectionView.m in Sources */,
 				D78775EA206A845700425BFF /* LYPCustomButton.m in Sources */,
 				D78775F0206A845700425BFF /* UIView+Extension.m in Sources */,
@@ -1297,8 +1328,9 @@
 			baseConfigurationReference = 18A69A11E134569B1B601457 /* Pods-LYPShareCartoolManager.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LYPShareCartoolManager/LYPShareCartoolManager.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DN43523GZM;
+				DEVELOPMENT_TEAM = GCKJ377G9A;
 				GCC_PREFIX_HEADER = /Users/navchina/Desktop/LYPShareCartoolManager/LYPShareCartoolManager/PrefixHeader.pch;
 				INFOPLIST_FILE = LYPShareCartoolManager/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1308,7 +1340,7 @@
 					"$(PROJECT_DIR)/LYPShareCartoolManager/sdk/idfa",
 					"$(PROJECT_DIR)/LYPShareCartoolManager/sdk",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "animal.--";
+				PRODUCT_BUNDLE_IDENTIFIER = com.paperbox.paperShareManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1319,8 +1351,9 @@
 			baseConfigurationReference = C79874D679B716274A6D25F4 /* Pods-LYPShareCartoolManager.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LYPShareCartoolManager/LYPShareCartoolManager.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DN43523GZM;
+				DEVELOPMENT_TEAM = GCKJ377G9A;
 				GCC_PREFIX_HEADER = /Users/navchina/Desktop/LYPShareCartoolManager/LYPShareCartoolManager/PrefixHeader.pch;
 				INFOPLIST_FILE = LYPShareCartoolManager/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1330,7 +1363,7 @@
 					"$(PROJECT_DIR)/LYPShareCartoolManager/sdk/idfa",
 					"$(PROJECT_DIR)/LYPShareCartoolManager/sdk",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "animal.--";
+				PRODUCT_BUNDLE_IDENTIFIER = com.paperbox.paperShareManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

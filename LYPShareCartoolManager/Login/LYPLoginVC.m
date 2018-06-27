@@ -48,6 +48,12 @@
         [SVStatusHUD showWithStatus:@"请输入正确的信息"];
         return;
     }
+    
+    if ([StringEXtension isBlankString:[LYPUserSingle shareUserSingle].deviceToken]) {
+        [SVStatusHUD showWithStatus:@"服务器繁忙，稍后重试"];
+        return;
+    }
+    
       NSString *passW = [StringEXtension sha1:self.passWTextF.text];
     NSDictionary *dic = @{@"mobile":self.phoneTextF.text,@"password":passW,@"deviceToken":[LYPUserSingle shareUserSingle].deviceToken,@"ios":@(1)};
     [SVProgressHUD showWithStatus:@"正在登陆"];

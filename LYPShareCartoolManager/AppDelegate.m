@@ -39,7 +39,7 @@
     LYPCleanHomePageVC *homeVC = [[LYPCleanHomePageVC alloc]init];
     UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:homeVC];
     self.window.rootViewController = nav;
-    
+
 
 //    LYPManagerVC *managerVC = [[LYPManagerVC alloc]init];
 //    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:managerVC];
@@ -80,6 +80,20 @@
     NSLog(@"[XGDemo] receive Notification");
     [[XGPush defaultManager] reportXGNotificationInfo:userInfo];
 }
+
+//收到本地推送
+-(void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification{
+    
+    NSDictionary *apsDic = notification.userInfo[@"aps"];
+    
+    UIAlertController *alertVC = [UIAlertController alertSureWithMessage:apsDic[@"alert"] sureblock:^{
+        
+    }];
+    
+    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alertVC animated:YES completion:nil];
+
+}
+
 /**
  收到静默推送的回调
  
@@ -90,7 +104,9 @@
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
     NSLog(@"[XGDemo] receive slient Notification");
     NSLog(@"[XGDemo] userinfo %@", userInfo);
+
     [[XGPush defaultManager] reportXGNotificationInfo:userInfo];
+    
     completionHandler(UIBackgroundFetchResultNewData);
 }
 
@@ -145,8 +161,14 @@
 
 // App 在前台弹通知需要调用这个接口
 - (void)xgPushUserNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions))completionHandler {
-    [[XGPush defaultManager] reportXGNotificationInfo:notification.request.content.userInfo];
-    completionHandler(UNNotificationPresentationOptionBadge | UNNotificationPresentationOptionSound | UNNotificationPresentationOptionAlert);
+    
+    NSDictionary *apsDic = notification.request.content.userInfo[@"aps"];
+    UIAlertController *alertVC = [UIAlertController alertSureWithMessage:apsDic[@"alert"] sureblock:^{
+    }];
+    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alertVC animated:YES completion:nil];
+    
+//    [[XGPush defaultManager] reportXGNotificationInfo:notification.request.content.userInfo];
+//    completionHandler(UNNotificationPresentationOptionBadge | UNNotificationPresentationOptionSound | UNNotificationPresentationOptionAlert);
 }
 
 #endif

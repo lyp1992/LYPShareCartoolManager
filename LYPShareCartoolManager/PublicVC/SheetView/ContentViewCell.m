@@ -7,7 +7,8 @@
 //
 
 #import "ContentViewCell.h"
-
+#define sheetViewBackColor [UIColor colorWithRed:224/255.0 green:236/255.0 blue:250/255.0 alpha:1.0]
+#define sheetViewTopBackColor [UIColor colorWithRed:111/255.0 green:153/255.0 blue:204/255.0 alpha:1.0]
 @interface ContentViewCell () <UICollectionViewDelegate, UICollectionViewDataSource>
 
 @end
@@ -26,7 +27,7 @@
 {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
-        layout.minimumLineSpacing = 1.0;
+        layout.minimumLineSpacing = 0;
         layout.minimumInteritemSpacing = 0;
         layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
         self.cellCollectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height) collectionViewLayout:layout];
@@ -37,8 +38,8 @@
             // Fallback on earlier versions
         }
 
-        self.cellCollectionView.backgroundColor = [UIColor colorWithRed:(0x90 / 255.0)green:(0x90 / 255.0)blue:(0x90 / 255.0)alpha:1];
-        self.cellCollectionView.layer.borderColor = [UIColor colorWithRed:(0x90 / 255.0)green:(0x90 / 255.0)blue:(0x90 / 255.0)alpha:1].CGColor;
+        self.cellCollectionView.backgroundColor = sheetViewBackColor;
+        self.cellCollectionView.layer.borderColor = sheetViewBackColor.CGColor;
         self.cellCollectionView.layer.borderWidth = 1.0f;
         [self.cellCollectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"inner.cell"];
         self.cellCollectionView.dataSource = self;
@@ -84,22 +85,58 @@
             [view removeFromSuperview];
         }
     }
-    innerCell.layer.borderColor = [UIColor colorWithRed:(0x90 / 255.0)green:(0x90 / 255.0)blue:(0x90 / 255.0)alpha:1].CGColor;
+    innerCell.layer.borderColor = sheetViewBackColor.CGColor;
     innerCell.layer.borderWidth = 1;
     
     BOOL hasColor = NO;
     if (self.cellWithColorBlock) hasColor = self.cellWithColorBlock(indexPath);
-    innerCell.backgroundColor = hasColor?[UIColor colorWithRed:(0xf0 / 255.0)green:(0xf0 / 255.0)blue:(0xf0 / 255.0)alpha:1]:[UIColor whiteColor];
+//    innerCell.backgroundColor = hasColor?[UIColor colorWithRed:(0xf0 / 255.0)green:(0xf0 / 255.0)blue:(0xf0 / 255.0)alpha:1]:[UIColor whiteColor];
+    innerCell.backgroundColor = [UIColor whiteColor];
     CGFloat width = self.sizeForItemBlock(nil, indexPath).width;
     CGFloat height = self.sizeForItemBlock(nil, indexPath).height;
     CGRect rect = CGRectMake(0, 0, width, height);
     UILabel *label = [[UILabel alloc] initWithFrame:rect];
-    label.text = self.cellForItemBlock(indexPath);
-    label.textColor = [UIColor blackColor];
+  
+    NSString *deviceIDStr = self.cellForItemBlock(indexPath);
+    if (indexPath.row == 0) {
+         NSArray *arr = [deviceIDStr componentsSeparatedByString:@"+"];
+        label.text = [NSString stringWithFormat:@"%@",arr[0]];
+    }else{
+        label.text = deviceIDStr;
+    }
+   
     label.textAlignment = NSTextAlignmentCenter;
     [innerCell.contentView addSubview:label];
     label.adjustsFontSizeToFitWidth = YES;
     label.numberOfLines = 0;
+    
+    if (indexPath.row == 4 || indexPath.row == 5) {
+        CGFloat cellTextF = [self.cellForItemBlock(indexPath) floatValue];
+        BOOL police = NO;
+        if (indexPath.row == 4 && !(cellTextF>7)) {
+            police = YES;
+        }else if(indexPath.row == 5 && !(cellTextF>20)){
+            police = YES;
+        }
+        if (police) {
+            label.textColor = [UIColor redColor];
+        }else{
+            label.textColor = [UIColor blackColor];
+        }
+    }else if (indexPath.row == 0){
+        NSArray *arr = [deviceIDStr componentsSeparatedByString:@"+"];
+        if (arr.count > 1) {
+            CGFloat rowf = [arr[1] floatValue];
+            if (rowf == 1) {
+                label.textColor = [UIColor redColor];
+            }else{
+                label.textColor = [UIColor blackColor];
+            }
+        }
+    }else{
+        label.textColor = [UIColor blackColor];
+    }
+    
     return innerCell;
 }
 

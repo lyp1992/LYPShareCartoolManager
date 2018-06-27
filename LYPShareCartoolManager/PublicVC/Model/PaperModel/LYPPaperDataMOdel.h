@@ -14,4 +14,6 @@
 
 @property (nonatomic, copy) NSString *title;
 
+@property (nonatomic, assign) BOOL isSelect;
+
 @end

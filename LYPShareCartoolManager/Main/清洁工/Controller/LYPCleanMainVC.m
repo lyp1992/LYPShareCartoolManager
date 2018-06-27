@@ -19,6 +19,8 @@
 #import "LYPDataListModel.h"
 #import "LYPBuildListModel.h"
 
+#import "LYPOperationVC.h"
+
 @interface LYPCleanMainVC ()<UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic,strong) NSArray *titleArr;
@@ -32,23 +34,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 //       [self setNavBar];//导航栏
-    [self setupTool];
+//    [self setupTool];
 
-    
-    self.titleArr =  @[@"设备ID", @"场所", @"大楼", @"楼层", @"类型", @"区域", @"蹲位", @"换纸", @"换电池"];
-    UITableView *tableView = [[UITableView alloc]initWithFrame:CGRectMake(0,64+45, self.view.frame.size.width, self.view.frame.size.height-64-45-45)];
+    self.titleArr =  @[@"设备ID",@"类型", @"区域", @"蹲位", @"换纸", @"换电池"];
+    UITableView *tableView = [[UITableView alloc]initWithFrame:CGRectMake(0,0, self.view.frame.size.width, self.view.frame.size.height)];
     tableView.dataSource = self;
     tableView.delegate = self;
+    tableView.tableFooterView = [[UIView alloc]initWithFrame:CGRectZero];
     [self.view addSubview:tableView];
     self.tableview = tableView;
-    
-//    SheetView *sheetView = [[SheetView alloc] initWithFrame:CGRectMake(0,64+45, self.view.frame.size.width, self.view.frame.size.height-64-45-45)];
-//    sheetView.dataSource = self;
-//    sheetView.delegate = self;
-//    sheetView.sheetHead = @"序号";
-//    sheetView.titleRowHeight = 60;
-//    sheetView.titleColWidth = 100;
-//    [self.view addSubview:sheetView];
     
 //    请求数据
     LYPNetWorkTool *netWorkTool = [[LYPNetWorkTool alloc]init];
@@ -60,7 +54,6 @@
         if (![StringEXtension isBlankString:self.listModel.error.msg]) {
             [SVStatusHUD showWithStatus:self.listModel.error.msg];
         }else{
-//            [sheetView reloadData];
             [self.tableview reloadData];
         }
         
@@ -175,12 +168,13 @@
     LYPDataListModel *dataListModel = self.listModel.data[indexPath.section];
     //    60 * arr.count
     SheetView *sheetView = [[SheetView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 60 * (dataListModel.devices.count +1))];
+    sheetView.tableViewIndexPath = indexPath;
     sheetView.dataSource = self;
     sheetView.delegate = self;
     sheetView.sheetHead = @"序号";
     sheetView.titleRowHeight = 60;
-    sheetView.titleColWidth = 60;
-    sheetView.tableViewIndexPath = indexPath;
+    sheetView.titleColWidth = 80;
+   
     [cell.contentView addSubview:sheetView];
     
     return cell;
@@ -196,11 +190,15 @@
 }
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-    UIView *containView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 45)];
     
-    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, tableView.frame.size.height, 45)];
+    UIColor *backColor = [UIColor colorWithRed:224/255.0 green:236/255.0 blue:250/255.0 alpha:1.0];
+    
+    UIView *containView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 45)];
+    containView.backgroundColor = backColor;
+    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(15, 0, tableView.frame.size.height, 45)];
      LYPDataListModel *dataListModel = self.listModel.data[section];
     label.text = dataListModel.location;
+    label.backgroundColor = backColor;
     [containView addSubview:label];
     
     return containView;
@@ -223,7 +221,7 @@
     NSString *rowStr;
     switch (indexCol.row) {
         case 0:{
-            rowStr = [NSString stringWithFormat:@"%d",model.deviceId];
+            rowStr = [NSString stringWithFormat:@"%d+%d",model.deviceId,model.online];
             break;
         }
             //        case 1:{
@@ -231,32 +229,32 @@
             //           rowStr = [NSString stringWithFormat:@"%@",model.sn];
             //                break;
             //        }
-        case 2:{
-            rowStr = [NSString stringWithFormat:@"%@",model.build];
-            break;
-        }
-        case 3:{
-            rowStr = [NSString stringWithFormat:@"%d",model.floor];
-            break;
-        }
-        case 4:{
+//        case 2:{
+//            rowStr = [NSString stringWithFormat:@"%@",model.build];
+//            break;
+//        }
+//        case 3:{
+//            rowStr = [NSString stringWithFormat:@"%d",model.floor];
+//            break;
+//        }
+        case 1:{
             rowStr = [NSString stringWithFormat:@"%@",model.toiletType];
             break;
         }
-        case 5:{
+        case 2:{
             rowStr = [NSString stringWithFormat:@"%@",model.toiletId];
             break;
         }
-        case 6:{
+        case 3:{
             rowStr = [NSString stringWithFormat:@"%@",model.seatId];
             break;
         }
-        case 7:{
-            rowStr = @"YES";
+        case 4:{
+            rowStr = [NSString stringWithFormat:@"%@",model.paper];
             break;
         }
-        case 8:{
-            rowStr = @"YES";
+        case 5:{
+            rowStr = [NSString stringWithFormat:@"%@",model.battery];
             break;
         }
         default:
@@ -281,7 +279,7 @@
 }
 - (CGFloat)sheetView:(SheetView *)sheetView widthForColAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 80;
+    return 100;
 }
 
 - (BOOL)sheetView:(SheetView *)sheetView cellWithColorAtIndexRow:(NSIndexPath *)indexRow
@@ -292,7 +290,7 @@
 -(void)sheetView:(SheetView *)sheetView didSelectItemAtIndexRow:(NSIndexPath *)indexRow indexCol:(NSIndexPath *)indexCol
 {
     NSLog(@"点击 row %ld, col %ld", (long)indexRow.row, (long)indexCol.row);
-    if (!(indexCol.row == 7 || indexCol.row == 8)) {
+    if (!(indexCol.row == 4 || indexCol.row == 5)) {
         return;
     }
     LYPDataListModel *dataListModel = self.listModel.data[sheetView.tableViewIndexPath.section];
@@ -303,14 +301,19 @@
 //    }
 //    else{//还是需要调到其他界面去，点击确定换电磁成功或者换纸成功，才能刷新界面
     BOOL isbattery = NO;
-    if (indexCol.row == 7) {
+    if (indexCol.row == 4) {
         isbattery = NO;
     }else{
         isbattery = YES;
     }
-        LYPSureOperationVC *operationVC = [[LYPSureOperationVC alloc]init];
-        [operationVC itemWithModel:dataModel withTopTitleArr:self.titleArr andIndexRow:indexRow withIndexCol:indexCol IsBattery:isbattery];
-        [self.navigationController pushViewController:operationVC animated:YES];
+//        LYPSureOperationVC *operationVC = [[LYPSureOperationVC alloc]init];
+//        [operationVC itemWithModel:dataModel withTopTitleArr:self.titleArr andIndexRow:nil withIndexCol:nil IsBattery:isbattery];
+//        [self.navigationController pushViewController:operationVC animated:YES];
+    
+    LYPOperationVC *operationVC = [[LYPOperationVC alloc]init];
+    [operationVC itemWithModel:dataListModel withTopTitleArr:self.titleArr andIndexRow:indexRow withIndexCol:nil IsBattery:isbattery];
+    [self.navigationController pushViewController:operationVC animated:YES];
+    
 //    }
  
 }

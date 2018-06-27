@@ -16,6 +16,7 @@
 
 #import "LYPBuildListModel.h"
 #import "LYPBuildDataModel.h"
+#import "LYPScanViewController.h"
 
 @interface LYPCleanHomePageVC ()<UICollectionViewDelegate ,UICollectionViewDataSource>
 
@@ -47,7 +48,7 @@ static NSString *cleanHomeCellId = @"cleanHomeCellId";
  
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc]init];
     [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
-    self.collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 64, self.view.width, self.view.height-64) collectionViewLayout:flowLayout];
+    self.collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, self.view.width, self.view.height-70) collectionViewLayout:flowLayout];
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
     [self.collectionView registerClass:[LYPCleanHomeCell class] forCellWithReuseIdentifier:cleanHomeCellId];
@@ -57,6 +58,18 @@ static NSString *cleanHomeCellId = @"cleanHomeCellId";
 
     self.collectionView.mj_header = [MJRefreshStateHeader  headerWithRefreshingTarget:self refreshingAction:@selector(refreshData)];
     [self.collectionView.mj_header beginRefreshing];
+
+    UIView *containView = [[UIView alloc]initWithFrame:CGRectMake(0, SCREENHEIGHT - 70, SCREENWIDTH, 70)];
+    UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(25,5, self.view.width - 70, 44)];
+    [button addTarget:self action:@selector(equipmentCalibration) forControlEvents:UIControlEventTouchUpInside];
+    [button setTitle:@"设备校准" forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    button.backgroundColor = [UIColor blackColor];
+    button.layer.masksToBounds = YES;
+    button.layer.cornerRadius = 5.0f;
+    [containView addSubview:button];
+    [self.view addSubview:containView];
+
 }
 
 -(void)setNavBar{
@@ -65,6 +78,13 @@ static NSString *cleanHomeCellId = @"cleanHomeCellId";
     self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithNomalImage:@"navigationbar_msg" selectImage:@"navigationbar_msg" target:self action:@selector(showMessageVC)];
     self.title = @"共享纸盒"; self.navigationController.navigationBar.backgroundColor =  RGBACOLOR(43, 45, 51, 1);
 
+}
+
+//设备校准
+-(void)equipmentCalibration{
+    
+    LYPScanViewController *scanVC = [[LYPScanViewController alloc]init];
+    [self.navigationController pushViewController:scanVC animated:YES];
 }
 
 -(void)setUPData{
@@ -122,7 +142,7 @@ static NSString *cleanHomeCellId = @"cleanHomeCellId";
 //定义每个Section的四边间距
 -(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
 {
-    return UIEdgeInsetsMake(0, 20, 10, 20);//分别为上、左、下、右
+    return UIEdgeInsetsMake(25, 20, 10, 20);//分别为上、左、下、右
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{

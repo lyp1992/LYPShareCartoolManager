@@ -9,7 +9,8 @@
 #import "SheetView.h"
 #import "ContentViewCell.h"
 
-
+#define sheetViewBackColor [UIColor colorWithRed:224/255.0 green:236/255.0 blue:250/255.0 alpha:1.0]
+#define sheetViewTopBackColor [UIColor colorWithRed:111/255.0 green:153/255.0 blue:204/255.0 alpha:1.0]
 static NSString *leftViewCellId = @"left.tableview.cell";
 static NSString *topViewCellId = @"top.collectionview.cell";
 static NSString *contentViewCellId = @"content.tableview.cell";
@@ -42,7 +43,7 @@ static NSString *contentViewCellId = @"content.tableview.cell";
 - (instancetype)initWithFrame:(CGRect)frame
 {
     if (self = [super initWithFrame:frame]) {
-        self.layer.borderColor = [[UIColor colorWithRed:0xe5 / 255.0 green:0xe5 / 255.0 blue:0xe5 / 255.0 alpha:1.0] CGColor];
+        self.layer.borderColor = sheetViewBackColor.CGColor;
         self.layer.cornerRadius = 1.0f;
         self.layer.borderWidth = 1.0f;
         
@@ -50,13 +51,14 @@ static NSString *contentViewCellId = @"content.tableview.cell";
         self.leftView.dataSource = self;
         self.leftView.delegate = self;
         self.leftView.showsVerticalScrollIndicator = NO;
-        self.leftView.backgroundColor = [UIColor colorWithRed:(0x90 / 255.0)green:(0x90 / 255.0)blue:(0x90 / 255.0)alpha:1];
-        self.leftView.layer.borderColor = [UIColor colorWithRed:(0x90 / 255.0)green:(0x90 / 255.0)blue:(0x90 / 255.0)alpha:1].CGColor;
+
+        self.leftView.backgroundColor = [UIColor whiteColor];
+        self.leftView.layer.borderColor = sheetViewBackColor.CGColor;
         self.leftView.layer.borderWidth = 1.0f;
         self.leftView.separatorStyle = UITableViewCellSeparatorStyleNone;
         
         UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
-        layout.minimumLineSpacing = 1.0;
+        layout.minimumLineSpacing = 0;
         layout.minimumInteritemSpacing = 0;
         layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
         self.topView = [[SheetTopView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];
@@ -64,8 +66,9 @@ static NSString *contentViewCellId = @"content.tableview.cell";
         self.topView.delegate = self;
         self.topView.showsHorizontalScrollIndicator = NO;
         [self.topView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:topViewCellId];
-        self.topView.backgroundColor = [UIColor colorWithRed:(0x90 / 255.0)green:(0x90 / 255.0)blue:(0x90 / 255.0)alpha:1];
-        self.topView.layer.borderColor = [UIColor colorWithRed:(0x90 / 255.0)green:(0x90 / 255.0)blue:(0x90 / 255.0)alpha:1].CGColor;
+//        self.topView.backgroundColor = [UIColor colorWithRed:(0x90 / 255.0)green:(0x90 / 255.0)blue:(0x90 / 255.0)alpha:1];
+        self.topView.backgroundColor = sheetViewTopBackColor;
+        self.topView.layer.borderColor = sheetViewBackColor.CGColor;
         self.topView.layer.borderWidth = 1.0f;
         
         self.contentView = [[SheetContentView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
@@ -114,10 +117,11 @@ static NSString *contentViewCellId = @"content.tableview.cell";
     }
     self.sheetHeadLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.titleColWidth, self.titleRowHeight)];
     self.sheetHeadLabel.text = self.sheetHead;
-    self.sheetHeadLabel.textColor = [UIColor blackColor];
+    self.sheetHeadLabel.textColor = [UIColor whiteColor];
     self.sheetHeadLabel.textAlignment = NSTextAlignmentCenter;
-    self.sheetHeadLabel.backgroundColor = [UIColor colorWithRed:(0xf0 / 255.0)green:(0xf0 / 255.0)blue:(0xf0 / 255.0)alpha:1];
-    self.sheetHeadLabel.layer.borderColor = [UIColor colorWithRed:(0x90 / 255.0)green:(0x90 / 255.0)blue:(0x90 / 255.0)alpha:1].CGColor;
+//    self.sheetHeadLabel.backgroundColor = [UIColor colorWithRed:(0xf0 / 255.0)green:(0xf0 / 255.0)blue:(0xf0 / 255.0)alpha:1];
+    self.sheetHeadLabel.backgroundColor = sheetViewTopBackColor;
+    self.sheetHeadLabel.layer.borderColor = sheetViewBackColor.CGColor;
     self.sheetHeadLabel.layer.borderWidth = 1.0;
     [self addSubview:self.sheetHeadLabel];
 }
@@ -153,8 +157,8 @@ static NSString *contentViewCellId = @"content.tableview.cell";
         for (UIView *view in leftCell.contentView.subviews) {
             [view removeFromSuperview];
         }
-        leftCell.backgroundColor = [UIColor colorWithRed:(0xf0 / 255.0)green:(0xf0 / 255.0)blue:(0xf0 / 255.0)alpha:1];
-        leftCell.layer.borderColor = [UIColor colorWithRed:(0x90 / 255.0)green:(0x90 / 255.0)blue:(0x90 / 255.0)alpha:1].CGColor;
+        leftCell.backgroundColor = [UIColor whiteColor];
+        leftCell.layer.borderColor = sheetViewBackColor.CGColor;
         leftCell.layer.borderWidth = 1;
         
         CGFloat width = self.titleColWidth;
@@ -167,8 +171,26 @@ static NSString *contentViewCellId = @"content.tableview.cell";
         label.textAlignment = NSTextAlignmentCenter;
         label.numberOfLines = 0;
         label.adjustsFontSizeToFitWidth = YES;
-//        label.font = [UIFont systemFontOfSize:10];
+        label.font = [UIFont systemFontOfSize:15];
         [leftCell.contentView addSubview:label];
+        
+        UIView *promptView = [[UIView alloc]initWithFrame:CGRectMake((width/4-10)/2, (height - 10)/2, 10, 10)];
+        promptView.layer.masksToBounds = YES;
+        promptView.layer.cornerRadius = 5;
+        [leftCell.contentView addSubview:promptView];
+        
+        //        获取第五列，或者第六列的值，看看是否有需要换纸的操作
+        CGFloat col = [self.dataSource sheetView:self numberOfColsInSection:self.tableViewIndexPath.section];
+        if (col > 4) {
+            CGFloat cellTextF4 = [[self.dataSource sheetView:self cellForContentItemAtIndexRow:indexPath indexCol:[NSIndexPath indexPathForItem:4 inSection:self.tableViewIndexPath.section]] floatValue];
+            CGFloat cellText5 = [[self.dataSource sheetView:self cellForContentItemAtIndexRow:indexPath indexCol:[NSIndexPath indexPathForItem:5 inSection:self.tableViewIndexPath.section]] floatValue];
+            if (!(cellTextF4 > 7) || !(cellText5 > 20)) {
+                promptView.backgroundColor = [UIColor redColor];
+            }else{
+                promptView.backgroundColor = [UIColor grayColor];
+            }
+        }
+
         
         return leftCell;
     }
@@ -208,7 +230,7 @@ static NSString *contentViewCellId = @"content.tableview.cell";
         }
     };
     
-    contentCell.backgroundColor = [UIColor colorWithRed:(0x90 / 255.0)green:(0x90 / 255.0)blue:(0x90 / 255.0)alpha:1];
+    contentCell.backgroundColor = [UIColor whiteColor];
     contentCell.cellCollectionView.frame = CGRectMake(0, 0, self.frame.size.width - self.titleColWidth, [self.delegate sheetView:self heightForRowAtIndexPath:indexPath]);
     [contentCell.cellCollectionView reloadData];
     
@@ -252,8 +274,8 @@ static NSString *contentViewCellId = @"content.tableview.cell";
         for (UIView *view in topCell.contentView.subviews) {
             [view removeFromSuperview];
         }
-        topCell.backgroundColor = [UIColor colorWithRed:(0xf0 / 255.0)green:(0xf0 / 255.0)blue:(0xf0 / 255.0)alpha:1];
-        topCell.layer.borderColor = [UIColor colorWithRed:(0x90 / 255.0)green:(0x90 / 255.0)blue:(0x90 / 255.0)alpha:1].CGColor;
+        topCell.backgroundColor = sheetViewTopBackColor;
+        topCell.layer.borderColor = sheetViewBackColor.CGColor;
         topCell.layer.borderWidth = 1;
         CGFloat width = [self.delegate sheetView:self widthForColAtIndexPath:indexPath];
         CGFloat height = self.titleRowHeight;
@@ -262,9 +284,9 @@ static NSString *contentViewCellId = @"content.tableview.cell";
         label.text = [self.dataSource sheetView:self cellForTopRowAtIndexPath:indexPath];
         label.numberOfLines = 0;
         label.adjustsFontSizeToFitWidth = YES;
-        label.textColor = [UIColor blackColor];
+        label.textColor = [UIColor whiteColor];
         label.textAlignment = NSTextAlignmentCenter;
-//        label.font = [UIFont systemFontOfSize:10];
+        
         [topCell.contentView addSubview:label];
     }
     
