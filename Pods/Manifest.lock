@@ -28,6 +28,15 @@ DEPENDENCIES:
   - MJRefresh (~> 3.1.12)
   - SVProgressHUD (~> 2.2)
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - JZLocationConverter
+    - Masonry
+    - MJExtension
+    - MJRefresh
+    - SVProgressHUD
+
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   JZLocationConverter: 3d816bee6484aed9c155a6045a02ce444833e2f0
@@ -38,4 +47,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: bc69d958627d9afefd851db7443f33051f5c5123
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.5.3
